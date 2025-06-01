@@ -1,0 +1,1178 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <meta name="description" content="鑲湧 HONG GI MANSION" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="鑲湧 HONG GI MANSION" />
+    <meta property="og:description" content="城隍商圈－樹河雍居" />
+    <meta property="og:image" content="" />
+    <title>鑲湧 HONG GI MANSION</title>
+    <style>
+      :root {
+        --main-color: #617e64;
+        --main-color-hover: #445846;
+
+        max-height: 100vh;
+        width: 100%;
+        overflow-x: hidden;
+        font-family: "Noto Serif TC", serif, Arial, Helvetica;
+        scroll-behavior: smooth;
+        scroll-padding-top: 3.25rem;
+      }
+
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      @keyframes fade-lr {
+        0% {
+          transform: translateX(-10px);
+        }
+
+        25% {
+          transform: translateX(10px);
+        }
+
+        50% {
+          transform: translateX(-10px);
+        }
+
+        75% {
+          transform: translateX(10px);
+        }
+
+        100% {
+          transform: translateX(-10px);
+        }
+      }
+
+      .animate-fade {
+        animation-name: fade-lr;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+
+      .with-stable-padding {
+        padding: 3rem 1rem;
+      }
+
+      .gallery-img {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        transform: translate(-1.5rem, 1.5rem);
+        opacity: 40%;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .gallery-img.active {
+        position: relative;
+        z-index: 1;
+        transform: translate(0);
+        opacity: 100%;
+      }
+
+      @media (min-width: 1024px) {
+        .with-stable-padding {
+          padding: 6rem 8rem;
+        }
+      }
+
+      @media (min-width: 1280px) {
+        .text-vertical {
+          writing-mode: vertical-rl;
+        }
+
+        .xl-with-stable-padding {
+          padding: 10rem 12rem;
+        }
+      }
+
+      @media (min-width: 1536px) {
+        .with-stable-padding {
+          padding: 10rem 12rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="max-w-full overflow-hidden">
+    <header>
+      <h1 class="sr-only">鑲湧 HONG GI MANSION</h1>
+    </header>
+    <main>
+      <section
+        id="section-1"
+        class="relative h-screen w-full bg-[url('./assets/s1-bg.webp')] bg-cover bg-center bg-no-repeat"
+      >
+        <div
+          class="absolute inset-0 flex items-center justify-center bg-black/15 p-6"
+        >
+          <div class="text-center text-white xl:mt-[15vh]">
+            <img
+              src="./assets/鑲涌.svg"
+              alt="鑲涌 logo"
+              class="mx-auto xl:max-w-[300px]"
+            />
+            <h2
+              class="mt-10 flex items-center gap-4 text-2xl font-medium tracking-[0.2em] xl:text-6xl"
+            >
+              <span>城隍商圈</span>
+              <span class="w-8 border-b-2 border-white"></span>
+              <span>樹河雍居</span>
+            </h2>
+            <p class="mt-4 text-xl font-medium tracking-widest xl:text-4xl">
+              客雅溪.中山路交匯
+            </p>
+            <img
+              src="./assets/閎基建築.svg"
+              alt="閎基建築"
+              class="mx-auto mt-[20vh] xl:mt-[25vh] xl:max-w-[300px]"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="section-2"
+        class="with-stable-padding relative min-h-screen w-full bg-[url('./assets/green-bg-2.webp')] bg-cover bg-[100%_100%] xl:flex xl:flex-row-reverse"
+      >
+        <div class="relative z-10 flex flex-col text-white xl:mt-40">
+          <p>Dancing House</p>
+          <h2
+            class="my-10 text-2xl font-semibold leading-snug tracking-widest xl:my-12"
+          >
+            <span>建築會跳舞</span>
+            <br />
+            <span>靈感參考歐洲河畔的</span>
+            <br />
+            <span>藝術雕塑</span>
+          </h2>
+          <p class="font-medium leading-relaxed tracking-widest">
+            <span>靈感源自捷克伏爾塔瓦河畔的「跳舞的房子」，</span>
+            <br />
+            <span>建築如裙擺般層層疊起，隨風與綠意於城市間翩然起舞；</span>
+            <br />
+            <span>基座設計猶如鑽石切割，對應八心八箭的完美比例，</span>
+            <br />
+            <span>萬物鑲嵌於此，共奏一曲與自然相擁的建築舞曲。</span>
+          </p>
+          <p class="mt-10">/ 水岸建築</p>
+          <img
+            src="./assets/building-draft-2.svg"
+            alt="外觀輪廓"
+            class="hidden xl:mt-16 xl:block xl:translate-x-[-8vw]"
+          />
+          <img
+            src="./assets/fish.svg"
+            alt="fish"
+            class="ml-[18vw] mt-auto hidden size-28 xl:block"
+          />
+        </div>
+        <img
+          src="./assets/building-draft-1.svg"
+          alt="外觀輪廓"
+          class="absolute inset-x-0 bottom-[5%] xl:static xl:top-[5%] xl:mr-auto xl:max-w-[750px] xl:translate-x-[-10vw] 2xl:translate-x-[-5vw]"
+        />
+        <img
+          src="./assets/fly-bird.svg"
+          alt="fly-birds"
+          class="absolute right-0 top-40 size-24 xl:left-[36vw] 2xl:top-72"
+        />
+      </section>
+
+      <section
+        id="section-3"
+        class="with-stable-padding relative w-full bg-[url('./assets/green-bg-2.webp')] bg-center xl:px-16 xl:py-40 2xl:px-48 2xl:py-40"
+      >
+        <div id="section-swiper-1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="w-full gap-x-10 xl:flex xl:items-stretch">
+                <div
+                  class="relative flex flex-col text-white xl:w-[40%] xl:text-end"
+                >
+                  <img
+                    src="./assets/spiral.svg"
+                    alt="spiral"
+                    class="absolute -top-6 left-32 size-20 xl:-top-16 xl:left-[unset] xl:right-28 xl:size-28"
+                  />
+                  <p>HIGH-RISE <br />LANDMARK</p>
+                  <h2
+                    class="my-10 text-2xl font-semibold leading-snug tracking-widest xl:mt-10"
+                  >
+                    <span>中山路 親溪樂活</span>
+                    <br />
+                    <span>20層地標 眺山望海</span>
+                  </h2>
+                  <p
+                    class="font-medium leading-relaxed tracking-widest xl:mt-auto"
+                  >
+                    <span>以地標建築的居高臨下身段， </span>
+                    <br />
+                    <span>收藏新竹城心的母親河『客雅溪』，</span>
+                    <br />
+                    <span>選擇自然和諧與城市繁華交會之地， </span>
+                    <br />
+                    <span>是閎基建築為住宅與人牽起的連結。</span>
+                  </p>
+                  <div class="hidden justify-end xl:mt-6 xl:flex 2xl:mt-8">
+                    <button type="button" class="section-swiper-1-btn">
+                      <img
+                        src="./assets/arrow-right.svg"
+                        alt="arrow-right"
+                        class="size-14 xl:size-16 2xl:size-20"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div
+                  id="gallery-1"
+                  class="relative mt-10 xl:order-first xl:mt-auto xl:w-[50%]"
+                >
+                  <img
+                    src="./assets/中山路-1.webp"
+                    alt="中山路"
+                    class="gallery-img active aspect-[8/5] object-cover"
+                  />
+                  <img
+                    src="./assets/客雅溪.webp"
+                    alt="客雅溪"
+                    class="gallery-img aspect-[8/5] object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="w-full gap-x-10 xl:flex xl:items-stretch">
+                <div
+                  class="relative flex flex-col text-white xl:w-[40%] xl:text-end"
+                >
+                  <img
+                    src="./assets/spiral.svg"
+                    alt="spiral"
+                    class="absolute -top-6 left-36 size-20 xl:-top-16 xl:left-[unset] xl:right-28 xl:size-28"
+                  />
+                  <p>INTERNATIONAL <br />WATERFRONT</p>
+                  <h2
+                    class="my-10 text-2xl font-semibold leading-snug tracking-widest xl:mt-10"
+                  >
+                    <span>「客雅溪大公園改造計畫」</span>
+                    <br />
+                    <span>國際級水岸再生</span>
+                  </h2>
+                  <h3
+                    class="text-lg font-semibold leading-snug tracking-widest xl:mt-4"
+                  >
+                    客雅溪綠帶公園 持續進化中
+                  </h3>
+                  <p
+                    class="font-medium leading-relaxed tracking-widest xl:mt-auto"
+                  >
+                    <span>
+                      看齊國際都市溪流再生計畫，如荷蘭Buiksloterham水岸再生、
+                    </span>
+                    <br />
+                    <span>美國波特蘭晶泉溪復育、韓國首爾清溪川整治。</span>
+                    <br />
+                    <span>綿延2.1公里改造計畫，串聯六大公園，</span>
+                    <br />
+                    <span>復育老樹棲地，守護水岸生態之美。</span>
+                  </p>
+                  <div class="hidden justify-end xl:mt-6 xl:flex 2xl:mt-8">
+                    <button type="button" class="section-swiper-1-btn">
+                      <img
+                        src="./assets/arrow-right.svg"
+                        alt="arrow-right"
+                        class="size-14 xl:size-16 2xl:size-20"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div
+                  id="gallery-2"
+                  class="relative mt-10 xl:order-first xl:mt-auto xl:w-[50%]"
+                >
+                  <img
+                    src="./assets/公園-1.webp"
+                    alt="公園"
+                    class="gallery-img active aspect-[8/5] object-cover"
+                  />
+                  <img
+                    src="./assets/公園-2.webp"
+                    alt="公園"
+                    class="gallery-img aspect-[8/5] object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 flex justify-end xl:hidden">
+          <button type="button" class="section-swiper-1-btn">
+            <img
+              src="./assets/arrow-right.svg"
+              alt="arrow-right"
+              class="size-20"
+            />
+          </button>
+        </div>
+      </section>
+
+      <section id="section-4" class="overflow-x-auto xl:overflow-hidden">
+        <div
+          class="relative flex aspect-video size-full min-w-[1200px] max-w-full bg-[url('./assets/空拍.webp')] bg-cover bg-center bg-no-repeat lg:min-w-[2000px] xl:min-w-[unset]"
+        >
+          <div
+            class="mask absolute left-0 top-0 z-10 size-full overscroll-contain bg-black/30 lg:hidden"
+          >
+            <img
+              src="./assets/swipe.svg"
+              alt="左右滑動"
+              class="animate-fade sticky left-1/2 top-1/2 size-16 -translate-x-1/2 -translate-y-1/2"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="section-5"
+        class="with-stable-padding relative w-full bg-[url('./assets/green-bg-2.webp')] bg-center"
+      >
+        <div id="section-swiper-2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="xl:flex xl:items-stretch xl:justify-between">
+                <div class="text-white xl:mt-auto xl:w-1/3">
+                  <div class="relative">
+                    <p class="mb-12">
+                      BUSTLING <br />
+                      COMMERCIAL DISTRICT
+                    </p>
+                    <img
+                      src="./assets/spiral-2.svg"
+                      alt="spiral"
+                      class="absolute -top-6 left-52 size-20 xl:-top-16 xl:left-[unset] xl:right-40 xl:size-28"
+                    />
+                  </div>
+                  <h2
+                    class="mb-10 mt-6 text-3xl font-semibold leading-snug tracking-widest xl:mb-24"
+                  >
+                    <span>廟口飄香 巨城時尚</span>
+                    <br />
+                    <span>中山路一線縱享</span>
+                  </h2>
+                  <p
+                    class="mb-10 font-medium leading-relaxed tracking-widest xl:mb-16"
+                  >
+                    從「鑲湧」出發，中山路驅車約5分鐘即可到達「城隍廟商圈」，再行駛約3分鐘，便可輕鬆抵達「巨城商圈」。若不想開車，日常採買所需的「經國商圈」就在家門口，步行約5分鐘即可滿足日常所需，完美機能自然相擁！
+                  </p>
+                  <button
+                    type="button"
+                    class="section-swiper-2-btn hidden xl:block"
+                  >
+                    <img
+                      src="./assets/arrow-right.svg"
+                      alt="arrow-right"
+                      class="size-14 xl:size-16 2xl:size-20"
+                    />
+                  </button>
+                </div>
+                <div class="xl:w-1/2">
+                  <div class="my-6 grid xl:mb-3 xl:mt-0">
+                    <img
+                      src="./assets/巨城.webp"
+                      alt="巨城"
+                      class="aspect-[5/3] object-cover object-top xl:aspect-video"
+                    />
+                  </div>
+                  <div class="grid gap-x-2 gap-y-6 xl:grid-cols-2">
+                    <img
+                      src="./assets/大遠百.webp"
+                      alt="大遠百"
+                      class="aspect-[5/3] object-cover object-top xl:aspect-video"
+                    />
+                    <img
+                      src="./assets/廟口.webp"
+                      alt="廟口"
+                      class="aspect-[5/3] object-cover object-top xl:aspect-video"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="xl:flex xl:items-stretch xl:justify-between">
+                <div class="text-white xl:mt-auto xl:w-1/3">
+                  <div class="relative">
+                    <p class="mb-12">
+                      BUSTLING <br />
+                      COMMERCIAL DISTRICT
+                    </p>
+                    <img
+                      src="./assets/spiral-2.svg"
+                      alt="spiral"
+                      class="absolute -top-6 left-52 size-20 xl:-top-16 xl:left-[unset] xl:right-40 xl:size-28"
+                    />
+                  </div>
+                  <h2
+                    class="mb-10 mt-6 text-3xl font-semibold leading-snug tracking-widest xl:mb-24"
+                  >
+                    <span>竹科高效通勤</span>
+                    <br />
+                    <span>四大縱貫道路交匯</span>
+                  </h2>
+                  <p class="mb-10 font-medium leading-relaxed tracking-widest">
+                    車行約1分鐘，即達「經國路」與「中華路」兩大主幹道，約12分鐘直達國道一號與竹科核心，讓通勤暢行無阻。西向約3分鐘，接軌新竹外環「茄苳景觀大道」，未來更串連「客雅大道延伸段」，暢行竹科與國道三號，掌握外環利多與幹道機能，從容掌握生活節奏。
+                  </p>
+                  <button
+                    type="button"
+                    class="section-swiper-2-btn hidden xl:block"
+                  >
+                    <img
+                      src="./assets/arrow-right.svg"
+                      alt="arrow-right"
+                      class="size-14 xl:size-16 2xl:size-20"
+                    />
+                  </button>
+                </div>
+                <div class="mt-6 grid gap-y-3 xl:w-1/2">
+                  <img
+                    src="./assets/經國路街廓實景.webp"
+                    alt="經國路街廓實景"
+                    class="aspect-[5/3] object-cover object-top xl:aspect-[5/2]"
+                  />
+                  <img
+                    src="./assets/茄苳景觀大道實景.webp"
+                    alt="茄苳景觀大道實景"
+                    class="aspect-[5/3] object-cover object-top xl:aspect-[5/2]"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="xl:flex xl:items-stretch xl:justify-between">
+                <div class="text-white xl:mt-auto xl:flex xl:w-1/3 xl:flex-col">
+                  <div class="relative">
+                    <p class="mb-12">
+                      BUSTLING <br />
+                      COMMERCIAL DISTRICT
+                    </p>
+                    <img
+                      src="./assets/spiral-2.svg"
+                      alt="spiral"
+                      class="absolute -top-6 left-52 size-20 xl:-top-16 xl:left-[unset] xl:right-40 xl:size-28"
+                    />
+                  </div>
+                  <h2
+                    class="my-6 text-3xl font-semibold leading-snug tracking-widest"
+                  >
+                    <span>國泰聯手日商三井集團</span>
+                    <br />
+                    <span>4000坪商業住宅</span>
+                  </h2>
+                  <h3
+                    class="mb-10 text-xl font-semibold leading-snug tracking-widest xl:mb-24"
+                  >
+                    日系商圈加持，打造新型生活商業體驗
+                  </h3>
+                  <p
+                    class="mb-10 font-medium leading-relaxed tracking-widest xl:mt-auto"
+                  >
+                    國泰建設、日商台灣三井不動產聯手，預期引進三井不動產在都會型小型購物商場的成功經驗，帶來國際日系商圈的生活複合新體驗。
+                  </p>
+                  <button
+                    type="button"
+                    class="section-swiper-2-btn hidden xl:block"
+                  >
+                    <img
+                      src="./assets/arrow-right.svg"
+                      alt="arrow-right"
+                      class="size-14 xl:size-16 2xl:size-20"
+                    />
+                  </button>
+                </div>
+                <div class="mt-6 grid gap-y-6 xl:my-auto xl:w-[55%]">
+                  <img
+                    src="./assets/外觀3D示意.webp"
+                    alt="外觀3D示意"
+                    class="aspect-[5/3] object-cover object-top xl:aspect-[5/4]"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="xl:flex xl:items-stretch xl:justify-between">
+                <div class="text-white xl:mt-auto xl:w-1/3">
+                  <div class="relative">
+                    <p class="mb-12">
+                      SILICON VALLEY <br />
+                      IN ASIA
+                    </p>
+                    <img
+                      src="./assets/spiral-2.svg"
+                      alt="spiral"
+                      class="absolute -top-6 left-40 size-20 xl:-top-16 xl:left-[unset] xl:right-40 xl:size-28"
+                    />
+                  </div>
+                  <h2
+                    class="my-6 text-3xl font-semibold leading-snug tracking-widest"
+                  >
+                    <span>領銜台灣科技首都</span>
+                    <br />
+                    <span>亞洲矽谷逐步實踐</span>
+                  </h2>
+                  <h3
+                    class="mb-10 text-xl font-semibold leading-snug tracking-widest xl:mb-24"
+                  >
+                    『X基地』『生醫園區』 『AI智慧園區』
+                  </h3>
+                  <p class="mb-10 font-medium leading-relaxed tracking-widest">
+                    政府規劃新竹為科技首都，近年推動生醫園區、X基地、AI智慧園區等科技聚落，磁吸頂尖人才進駐。產業榮景帶動人口流動、人口紅利推動住宅剛需，新竹未來無限可期。
+                  </p>
+                  <button
+                    type="button"
+                    class="section-swiper-2-btn hidden xl:block"
+                  >
+                    <img
+                      src="./assets/arrow-right.svg"
+                      alt="arrow-right"
+                      class="size-14 xl:size-16 2xl:size-20"
+                    />
+                  </button>
+                </div>
+                <div class="xl:w-1/2">
+                  <div class="my-6 grid xl:mb-3 xl:mt-0">
+                    <img
+                      src="./assets/AI智慧園區實景.webp"
+                      alt="AI智慧園區實景"
+                      class="aspect-[5/3] object-cover object-top xl:aspect-video"
+                    />
+                  </div>
+                  <div class="grid gap-x-2 gap-y-6 xl:grid-cols-2">
+                    <img
+                      src="./assets/生醫園區實景.webp"
+                      alt="生醫園區實景"
+                      class="aspect-[5/3] object-cover object-top xl:aspect-video"
+                    />
+                    <img
+                      src="./assets/新竹X基地實景.webp"
+                      alt="新竹X基地實景"
+                      class="aspect-[5/3] object-cover object-top xl:aspect-video"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 flex justify-end xl:hidden">
+          <button type="button" class="section-swiper-2-btn">
+            <img
+              src="./assets/arrow-right.svg"
+              alt="arrow-right"
+              class="size-20"
+            />
+          </button>
+        </div>
+      </section>
+
+      <section id="section-6" class="with-stable-padding bg-black/50">
+        <img
+          src="./assets/閎基建築機構logo.svg"
+          alt="閎基建築機構logo"
+          class="mx-auto mb-12 max-w-[50%] xl:mb-16 xl:max-w-52"
+        />
+        <div class="flex flex-col items-center text-white">
+          <div class="xl:mb-16">
+            <h2
+              class="mb-3 flex items-center gap-4 text-3xl font-semibold tracking-widest"
+            >
+              <span>閎基建築</span>
+              <span class="w-6 border-b-2 border-white xl:w-10"></span>
+              <span>環環相扣</span>
+            </h2>
+            <p
+              class="mb-10 text-center text-2xl font-semibold tracking-widest xl:mb-0 xl:text-3xl"
+            >
+              建築最親密的互信關係
+            </p>
+          </div>
+          <div class="mb-12 text-center text-lg">
+            <p>閎基開發｜禾逸開發｜集業營造｜勝駿建設</p>
+            <p>風勁建設｜禹晨開發｜錦田開發</p>
+          </div>
+          <div>
+            <p
+              class="mb-6 space-y-2.5 text-balance text-center text-2xl xl:mb-3"
+            >
+              <span class="block xl:inline">
+                成立至今
+                <span class="px-1 text-4xl font-semibold">20</span>
+                年
+              </span>
+              <span class="block xl:inline">
+                總推案量
+                <span class="px-1 text-4xl font-semibold">45</span>
+                案、
+              </span>
+              <span class="block xl:inline">
+                案總銷戶數
+                <span class="px-1 text-4xl font-semibold">2671</span>
+                戶
+              </span>
+            </p>
+            <p class="mx-auto mb-12 text-center text-2xl xl:mb-40 xl:text-2xl">
+              足跡遍佈南北7大縣市，屢獲全球規模設計獎項肯定。
+            </p>
+          </div>
+          <div class="flex flex-col items-center xl:gap-y-10">
+            <div class="xl:flex xl:gap-x-10">
+              <div class="p-5 xl:p-0">
+                <img
+                  src="./assets/2019美國MUSE設計金獎.svg"
+                  alt="2019美國MUSE設計金獎"
+                  class="xl:max-w-40"
+                />
+              </div>
+              <div class="p-5 xl:p-0">
+                <img
+                  src="./assets/2019美國MUSE設計銀獎.svg"
+                  alt="2019美國MUSE設計銀獎"
+                  class="xl:max-w-40"
+                />
+              </div>
+              <div class="p-5 xl:p-0">
+                <img
+                  src="./assets/2019美國SPARK星火設計獎.svg"
+                  alt="2019美國SPARK星火設計獎"
+                  class="xl:max-w-40"
+                />
+              </div>
+              <div class="p-5 xl:p-0">
+                <img
+                  src="./assets/2019布里斯本設計大獎.svg"
+                  alt="2019布里斯本設計大獎"
+                  class="xl:max-w-40"
+                />
+              </div>
+            </div>
+            <div class="xl:flex xl:gap-x-10">
+              <div class="p-5 xl:flex xl:justify-end xl:p-0">
+                <img
+                  src="./assets/2020法國DNA巴黎設計獎.svg"
+                  alt="2020法國DNA巴黎設計獎"
+                  class="xl:max-w-40"
+                />
+              </div>
+              <div class="p-5 xl:p-0">
+                <img
+                  src="./assets/2020美國AMP建築大師獎.svg"
+                  alt="2020美國AMP建築大師獎"
+                  class="xl:max-w-40"
+                />
+              </div>
+              <div class="p-5 xl:p-0">
+                <img
+                  src="./assets/2020義大利A'Design設計獎.svg"
+                  alt="2020義大利A'Design設計獎"
+                  class="xl:max-w-40"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="section-7"
+        class="with-stable-padding bg-[url('./assets/green-bg-2.webp')] bg-center text-white"
+      >
+        <div id="section-swiper-3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                class="grid xl:grid-cols-3 xl:place-items-center xl:gap-x-40"
+              >
+                <div class="text-white xl:order-last xl:col-span-1 xl:text-end">
+                  <p>ARCHITECTURAL<br />PLANNING</p>
+                  <p>建築規劃</p>
+                  <h2
+                    class="mb-4 mt-6 flex flex-col gap-y-2 font-semibold leading-snug tracking-widest"
+                  >
+                    <span class="text-3xl">木木建築設計事務所</span>
+                    <span class="text-2xl">林秉翰建築師</span>
+                  </h2>
+                  <img
+                    src="./assets/林秉翰建築師.webp"
+                    alt="林秉翰建築師"
+                    class="aspect-square object-cover object-center xl:ml-auto xl:max-w-[160px]"
+                  />
+                  <div
+                    class="mb-10 mt-6 font-medium leading-relaxed tracking-widest xl:mt-10"
+                  >
+                    <p>建築不只是結構，而是人與空間的對話</p>
+                    <p>攜手建築師父親，深耕新竹家園</p>
+                    <p>以人為本，讓生活與建築共鳴</p>
+                  </div>
+                  <div class="xl:flex xl:items-end xl:gap-x-10">
+                    <div class="mb-4 xl:mb-0">
+                      <span class="mr-2 text-2xl font-semibold">Portfolio</span>
+                      <span class="text-lg">/ 經典業績</span>
+                    </div>
+                    <ul class="space-y-2 xl:text-sm">
+                      <li>閎基建築 豹南門</li>
+                      <li>閎基建築 Le coin</li>
+                      <li>家益建設 阡陌晴</li>
+                    </ul>
+                  </div>
+                  <button
+                    type="button"
+                    class="section-swiper-3-btn ml-auto hidden xl:block"
+                  >
+                    <img
+                      src="./assets/arrow-right.svg"
+                      alt="arrow-right"
+                      class="mr-1 mt-4 size-16 xl:mr-0"
+                    />
+                  </button>
+                </div>
+                <div class="mt-6 xl:col-span-2 xl:mt-0 xl:flex">
+                  <div
+                    id="gallery-3"
+                    class="relative mb-16 mt-6 w-full xl:mb-0 xl:mt-0"
+                  >
+                    <img
+                      src="./assets/le-coin.webp"
+                      alt="le-coin"
+                      class="gallery-img active aspect-[8/5] object-cover"
+                    />
+                    <img
+                      src="./assets/南門段夜景.webp"
+                      alt="南門段夜景"
+                      class="gallery-img aspect-[8/5] object-cover"
+                    />
+                  </div>
+                  <div
+                    class="xl:text text-vertical mt-2 text-xl font-semibold leading-relaxed tracking-widest xl:ml-10"
+                  >
+                    <p>用視野為童年織夢</p>
+                    <p>也為城市織光</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="grid xl:grid-cols-7 xl:place-items-center xl:gap-x-28 xl:pr-10"
+              >
+                <div class="text-white xl:order-last xl:col-span-3 xl:text-end">
+                  <p>ARCHITECTURAL<br />DESIGN</p>
+                  <p>建築外觀</p>
+                  <h2
+                    class="mb-6 mt-6 flex flex-col gap-y-2 font-semibold leading-snug tracking-widest"
+                  >
+                    <span class="text-3xl">林淵源建築師事務所</span>
+                    <span class="text-2xl">林淵源建築師</span>
+                  </h2>
+                  <img
+                    src="./assets/林淵源建築師.webp"
+                    alt="林淵源建築師"
+                    class="aspect-square object-cover object-center xl:ml-auto xl:max-w-[160px]"
+                  />
+                  <div
+                    class="mb-10 mt-6 font-medium leading-relaxed tracking-widest xl:mt-10"
+                  >
+                    <p>入圍2011年TRAA第三屆台灣住宅建築獎、</p>
+                    <p>2016年TRAA第五屆台灣住宅建築獎，</p>
+                    <p>「兩岸五十位傑出建築人的追夢故事」專訪報導，</p>
+                    <p>
+                      浙江省海寧市「地表上的詩意」徐志摩故里永不落幕的建築展，
+                    </p>
+                    <p>亞洲十位參展建築師之一。</p>
+                  </div>
+                  <div>
+                    <div class="mb-6 xl:mb-4">
+                      <span class="mb-4 mr-2 text-2xl font-semibold"
+                        >Portfolio</span
+                      >
+                      <span class="text-lg">/ 經典業績</span>
+                    </div>
+                    <ul class="space-y-2 xl:text-sm">
+                      <li>「水邊森」入圍2011年TRAA第三屆台灣住宅建築獎</li>
+                      <li>「T house」入圍2016年TRAA第五屆台灣住宅建築獎</li>
+                      <li>
+                        「昕奕居」、「楓韻點石」入圍2018年TRAA第六屆台灣住宅建築獎
+                      </li>
+                    </ul>
+                  </div>
+                  <button
+                    type="button"
+                    class="section-swiper-3-btn ml-auto hidden xl:block"
+                  >
+                    <img
+                      src="./assets/arrow-right.svg"
+                      alt="arrow-right"
+                      class="mr-1 mt-4 size-16 xl:mr-0"
+                    />
+                  </button>
+                </div>
+                <div class="xl:col-span-4 xl:mt-0">
+                  <div
+                    id="gallery-4"
+                    class="relative mb-16 mt-10 w-full xl:mb-0 xl:mt-0"
+                  >
+                    <img
+                      src="./assets/昕奕居.webp"
+                      alt="昕奕居"
+                      class="gallery-img active aspect-[8/5] object-cover"
+                    />
+                    <img
+                      src="./assets/外觀夜景.webp"
+                      alt="外觀夜景"
+                      class="gallery-img aspect-[8/5] object-cover"
+                    />
+                  </div>
+                  <div
+                    class="xl:text mt-2 text-xl font-semibold leading-relaxed tracking-widest xl:mt-10"
+                  >
+                    讓『鑲湧』與河畔光影共同起舞
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="grid xl:grid-cols-7 xl:place-items-center xl:gap-x-28 xl:pr-10"
+              >
+                <div class="text-white xl:order-last xl:col-span-3 xl:text-end">
+                  <p>INTERIOR AND<br />LANDSCAPE DESIGN</p>
+                  <p>景觀公設</p>
+                  <h2
+                    class="mb-6 mt-6 flex flex-col gap-y-2 font-semibold leading-snug tracking-widest"
+                  >
+                    <span class="text-3xl">玖柞設計</span>
+                    <span class="text-2xl">蔡雅怡總監</span>
+                  </h2>
+                  <img
+                    src="./assets/蔡雅怡總監.webp"
+                    alt="蔡雅怡總監"
+                    class="aspect-square object-cover object-center xl:ml-auto xl:max-w-[160px]"
+                  />
+                  <div
+                    class="mb-10 mt-6 font-medium leading-relaxed tracking-widest xl:mt-10"
+                  >
+                    <p>從專業視角刻畫美學語彙，從既有環境的激盪，</p>
+                    <p>詮釋現代住宅氛圍，為每一寸空間打造獨有的表情。</p>
+                    <p>榮獲台灣、亞洲、世界多項設計大獎，</p>
+                    <p>國泰、富宇、總太⋯⋯多家品牌建商指名合作。</p>
+                  </div>
+                  <div>
+                    <div class="mb-6 xl:mb-4">
+                      <span class="mb-4 mr-2 text-2xl font-semibold"
+                        >Portfolio</span
+                      >
+                      <span class="text-lg">/ 代表作品</span>
+                    </div>
+                    <ul class="space-y-2 xl:text-sm">
+                      <li>
+                        國泰建設 國泰層峰 ｜ 富宇建設 富宇悅峰 ｜ 昂峰建設
+                        謙若樹
+                      </li>
+                      <li>
+                        春福建設 春福水硯 ｜ 聚富建設 聚富圓圓 ｜ 總太地產
+                        總太2020
+                      </li>
+                    </ul>
+                  </div>
+                  <button
+                    type="button"
+                    class="section-swiper-3-btn ml-auto hidden xl:block"
+                  >
+                    <img
+                      src="./assets/arrow-right.svg"
+                      alt="arrow-right"
+                      class="mr-1 mt-4 size-16 xl:mr-0"
+                    />
+                  </button>
+                </div>
+                <div class="xl:col-span-4 xl:mt-0">
+                  <div
+                    id="gallery-5"
+                    class="relative mb-16 mt-10 w-full xl:mb-0 xl:mt-0"
+                  >
+                    <img
+                      src="./assets/富宇悅峰.webp"
+                      alt="昕奕居"
+                      class="gallery-img active aspect-[8/5] object-cover"
+                    />
+                    <img
+                      src="./assets/國泰仰睦-大廳.webp"
+                      alt="國泰仰睦-大廳"
+                      class="gallery-img aspect-[8/5] object-cover"
+                    />
+                  </div>
+                  <div class="xl:mt-16">
+                    <div class="mb-6 xl:mb-4">
+                      <span class="mr-2 text-2xl font-semibold">Award</span>
+                      <span class="text-lg">/ 得獎經歷</span>
+                    </div>
+                    <ul class="space-y-2 xl:text-sm">
+                      <li>2018 亞洲設計獎</li>
+                      <li>2020 台灣空間美學新秀設計師金邸獎</li>
+                      <li>2021 繆思設計獎</li>
+                      <li>2024 承豪奢石首屆奢石獎</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 flex justify-end xl:hidden">
+          <button type="button" class="section-swiper-3-btn">
+            <img
+              src="./assets/arrow-right.svg"
+              alt="arrow-right"
+              class="size-20"
+            />
+          </button>
+        </div>
+      </section>
+
+      <section id="section-8" class="max-w-full">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.6921036669773!2d120.97475107531385!3d24.805994477964873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346835dca203e5ed%3A0x4ea161eaa22b2fd!2zMzAw5paw56u55biC5p2x5Y2A5Lit6I-v6Lev5LqM5q61MTkw6Jmf!5e0!3m2!1szh-TW!2stw!4v1747980134502!5m2!1szh-TW!2stw"
+          class="aspect-square w-full xl:aspect-[5/2.5]"
+          style="border: 0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+
+      <section
+        id="section-9"
+        class="with-stable-padding relative bg-[url('./assets/bg-marble.webp')] bg-center !px-8 text-[var(--main-color)] xl:grid xl:grid-cols-3 xl:!px-60"
+      >
+        <div class="absolute inset-0 bg-white/50"></div>
+        <div
+          class="relative z-10 mb-10 xl:col-span-1 xl:border-r xl:border-[var(--main-color)] xl:pr-28"
+        >
+          <h2 class="mb-6">
+            <span class="block">Information</span>
+            <span class="block text-3xl font-semibold">基本資料</span>
+          </h2>
+          <ul class="space-y-3">
+            <li class="">
+              <span class="mb-1 block font-semibold">建案名稱</span>
+              <span class="block">閎基鑲湧</span>
+            </li>
+            <li class="">
+              <span class="mb-1 block font-semibold">建案類型</span>
+              <span class="block">預售屋</span>
+            </li>
+            <li class="">
+              <span class="mb-1 block font-semibold">規劃坪數</span>
+              <span class="block">25-38坪</span>
+            </li>
+            <li class="">
+              <span class="mb-1 block font-semibold">投資興建</span>
+              <span class="block">禾逸開發股份有限公司</span>
+            </li>
+            <li class="">
+              <span class="mb-1 block font-semibold">建築代銷</span>
+              <span class="block">海悅機構-海宇國際股份有限公司</span>
+            </li>
+            <li class="">
+              <span class="mb-1 block font-semibold">建案位置</span>
+              <span class="block">新竹市香山區中山路、牛埔路交叉口</span>
+            </li>
+            <li class="">
+              <span class="mb-1 block font-semibold">接待中心</span>
+              <span class="block">新竹市東區中華路二段190號（國賓大飯店）</span>
+            </li>
+            <li class="">
+              <span class="mb-1 block font-semibold">貴賓專線</span>
+              <span class="block">03-5315588</span>
+            </li>
+          </ul>
+        </div>
+        <div class="relative z-10 xl:col-span-2 xl:pl-28">
+          <h2 class="mb-6">
+            <span class="block">Reservation</span>
+            <span class="block text-3xl font-semibold">立即預約</span>
+          </h2>
+          <form
+            id="form"
+            action=""
+            method="post"
+            class="xl:flex xl:flex-wrap xl:gap-x-12 [&_input]:placeholder:text-[var(--main-color)]"
+          >
+            <div class="grow space-y-6">
+              <div>
+                <label for="name" class="sr-only">姓名</label>
+                <input
+                  id="name"
+                  type="text"
+                  class="w-full border-0 border-b bg-transparent py-4 pl-0 focus:ring-0"
+                  placeholder="姓名"
+                />
+              </div>
+              <div>
+                <label for="phone" class="sr-only">手機號碼</label>
+                <input
+                  id="phone"
+                  type="tel"
+                  inputmode="tel"
+                  class="w-full border-0 border-b bg-transparent py-4 pl-0 focus:ring-0"
+                  placeholder="手機號碼"
+                />
+              </div>
+              <div>
+                <label for="verify" class="sr-only">驗證碼</label>
+                <input
+                  id="verify"
+                  type="text"
+                  inputmode="numeric"
+                  class="w-full border-0 border-b bg-transparent py-4 pl-0 focus:ring-0"
+                  placeholder="驗證碼"
+                />
+              </div>
+              <button
+                type="button"
+                class="w-full bg-[var(--main-color)] py-3 text-white hover:bg-[var(--main-color-hover)] xl:text-lg"
+              >
+                獲取驗證碼
+              </button>
+            </div>
+            <div class="mt-6 grow space-y-6 xl:mt-0">
+              <div>
+                <label for="email" class="sr-only">電子郵件</label>
+                <input
+                  id="email"
+                  type="email"
+                  inputmode="email"
+                  class="w-full border-0 border-b bg-transparent py-4 pl-0 focus:ring-0"
+                  placeholder="電子郵件"
+                />
+              </div>
+              <div data-role="county"></div>
+              <div data-role="district"></div>
+            </div>
+            <div class="xl:mt-10 xl:w-full xl:text-[14px]">
+              <p>您所登錄的個人資料將做為以下用途</p>
+              <p>
+                <span class="my-1 max-xl:block">
+                  (一)本網站所載之相關事項通知。
+                </span>
+                <span class="mb-1 max-xl:block">（⼆）客⼾管理與服務。</span>
+                <br class="hidden" />
+                <span class="max-xl:block">
+                  （三）本公司行銷業務之推廣本案實際內容以現場公布為準。
+                </span>
+              </p>
+              <div class="relative z-[2] mt-6 flex gap-x-2">
+                <input
+                  type="checkbox"
+                  name="confirm"
+                  id="confirm"
+                  class="mt-1 border-[#ccc] focus:shadow-none focus:ring-0"
+                />
+                <label for="confirm">
+                  本人已知悉以上個人資料蒐集聲明事項
+                  <a href="#" class="underline underline-offset-2"
+                    >隱私權聲明</a
+                  >
+                  以及海悅會員
+                  <a href="#" class="underline underline-offset-2"
+                    >使用者條款</a
+                  >
+                </label>
+              </div>
+              <button
+                type="submit"
+                class="mt-10 w-full bg-[var(--main-color)] py-3 text-white hover:bg-[var(--main-color-hover)] xl:text-lg"
+              >
+                確認預約
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- <script src="./assets/vendors/jquery.twzipcode.min.js"></script> -->
+
+    <script>
+      function initSectionSwiper(swiperSelector, btnSelector) {
+        const swiper = new Swiper(swiperSelector, {
+          loop: true,
+          slidesPerView: 1,
+          spaceBetween: 400,
+          allowTouchMove: false,
+          autoHeight: true,
+        });
+
+        $(btnSelector).click(() => {
+          swiper.slideNext();
+        });
+      }
+
+      initSectionSwiper("#section-swiper-1", ".section-swiper-1-btn");
+      initSectionSwiper("#section-swiper-2", ".section-swiper-2-btn");
+      initSectionSwiper("#section-swiper-3", ".section-swiper-3-btn");
+
+      function initGallery(selector) {
+        const totalLength = $(`${selector} .gallery-img`).length;
+
+        let activeIdx = 0;
+
+        setInterval(() => {
+          if (activeIdx === totalLength - 1) {
+            activeIdx = 0;
+          } else {
+            activeIdx += 1;
+          }
+
+          $(`${selector} .gallery-img`).removeClass("active");
+          const nextEl = $(`${selector} .gallery-img`).get(activeIdx);
+          $(nextEl).addClass("active");
+        }, 2800);
+      }
+
+      initGallery("#gallery-1");
+      initGallery("#gallery-2");
+      initGallery("#gallery-3");
+      initGallery("#gallery-4");
+      initGallery("#gallery-5");
+    </script>
+  </body>
+</html>

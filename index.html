@@ -199,7 +199,7 @@
               data-aos-anchor="#section-1"
             />
             <h2
-              class="xl:ap-4 mt-10 flex items-center gap-2 text-3xl font-medium tracking-[0.2em] xl:text-6xl"
+              class="xl:ap-4 mt-10 flex items-center gap-2 text-3xl font-medium tracking-widest xl:text-6xl xl:tracking-[0.2em]"
               data-aos="fade-up"
               data-aos-delay="500"
               data-aos-anchor="#section-1"
@@ -934,6 +934,7 @@
           </div>
           <div>
             <p
+              id="counter"
               class="mb-6 space-y-2.5 text-balance text-center text-xl xl:mb-3"
               data-aos="fade-up"
               data-aos-delay="700"
@@ -941,17 +942,26 @@
             >
               <span class="block xl:inline">
                 成立至今
-                <span class="text-4xl font-semibold">20</span>
+                <span
+                  class="counter-1 inline-block min-w-[45px] text-4xl font-semibold"
+                  >20</span
+                >
                 年
               </span>
               <span class="block xl:inline">
                 總推案量
-                <span class="text-4xl font-semibold">45</span>
+                <span
+                  class="counter-2 inline-block min-w-[45px] text-4xl font-semibold"
+                  >45</span
+                >
                 案、
               </span>
               <span class="block xl:inline">
                 案總銷戶數
-                <span class="text-4xl font-semibold">2671</span>
+                <span
+                  class="counter-3 inline-block min-w-[82px] text-4xl font-semibold"
+                  >2671</span
+                >
                 戶
               </span>
             </p>
@@ -1035,7 +1045,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div
-                class="relative grid xl:grid-cols-3 xl:place-items-center xl:gap-x-40"
+                class="relative grid xl:grid-cols-7 xl:place-items-center xl:gap-x-10"
               >
                 <img
                   src="./assets/spiral-3.svg"
@@ -1045,7 +1055,7 @@
                   data-aos-delay="900"
                   data-aos-anchor="#section-7"
                 />
-                <div class="text-white xl:order-last xl:col-span-1 xl:text-end">
+                <div class="text-white xl:order-last xl:col-span-3 xl:text-end">
                   <p
                     class="mb-2"
                     data-aos="fade-up"
@@ -1118,7 +1128,7 @@
                     />
                   </button>
                 </div>
-                <div class="mt-6 xl:col-span-2 xl:mt-0 xl:flex">
+                <div class="mt-6 xl:col-span-4 xl:mt-0 xl:flex">
                   <div
                     id="gallery-3"
                     class="relative mb-16 mt-6 w-full xl:mb-0 xl:mt-0"
@@ -1161,7 +1171,7 @@
             </div>
             <div class="swiper-slide">
               <div
-                class="relative grid xl:grid-cols-7 xl:place-items-center xl:gap-x-40"
+                class="relative grid xl:grid-cols-11 xl:place-items-center xl:gap-x-10"
               >
                 <img
                   src="./assets/spiral-3.svg"
@@ -1171,7 +1181,7 @@
                   data-aos-delay="900"
                   data-aos-anchor="#section-7"
                 />
-                <div class="text-white xl:order-last xl:col-span-3 xl:text-end">
+                <div class="text-white xl:order-last xl:col-span-5 xl:text-end">
                   <p
                     class="mb-2"
                     data-aos="fade-up"
@@ -1252,7 +1262,7 @@
                   </button>
                 </div>
                 <div
-                  class="xl:col-span-4 xl:mt-0"
+                  class="xl:col-span-6 xl:mt-0"
                   data-aos="fade-right"
                   data-aos-delay="300"
                   data-aos-anchor="#section-7"
@@ -1295,7 +1305,7 @@
             </div>
             <div class="swiper-slide">
               <div
-                class="relative grid xl:grid-cols-7 xl:place-items-center xl:gap-x-40"
+                class="relative grid xl:grid-cols-7 xl:place-items-center xl:gap-x-10"
               >
                 <img
                   src="./assets/spiral-3.svg"
@@ -1713,11 +1723,30 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
     <script src="./assets/vendors/jquery.twzipcode.min.js"></script>
 
     <script>
       $(document).ready(() => {
         const isMobile = window.innerWidth < 992;
+        const counterUp = window.counterUp.default;
+
+        function callback(entries) {
+          entries.forEach((entry) => {
+            const el = entry.target;
+
+            if (entry.isIntersecting) {
+              counterUp(el, {
+                duration: 4000,
+                delay: 20,
+              });
+            }
+          });
+        }
+
+        const IO = new IntersectionObserver(callback, { threshold: 1 });
+
+        IO.observe(document.querySelector("#counter"));
 
         // 初始化 AOS 庫
         AOS.init({

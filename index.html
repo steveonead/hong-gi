@@ -49,6 +49,61 @@
         max-width: 100%;
       }
 
+      #burger-icon {
+        width: 40px;
+        height: 30px;
+        position: relative;
+        margin-left: auto;
+        margin-top: 0.5rem;
+        transform: rotate(0deg);
+        transition: 0.5s ease-in-out;
+      }
+
+      #burger-icon span {
+        display: block;
+        position: absolute;
+        height: 2.7px;
+        width: 100%;
+        background: white;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+      }
+
+      #burger-icon span:nth-child(1) {
+        top: 0px;
+        transform-origin: left center;
+      }
+
+      #burger-icon span:nth-child(2) {
+        top: 12px;
+        transform-origin: left center;
+      }
+
+      #burger-icon span:nth-child(3) {
+        top: 24px;
+        transform-origin: left center;
+      }
+
+      #burger-icon.open span:nth-child(1) {
+        transform: rotate(45deg);
+        top: -2px;
+        left: 5.3px;
+      }
+
+      #burger-icon.open span:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+      }
+
+      #burger-icon.open span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 26px;
+        left: 5.3px;
+      }
+
       .img-with-caption-w {
         position: relative;
 
@@ -177,9 +232,60 @@
     </style>
   </head>
 
-  <body class="max-w-full overflow-hidden">
+  <body class="max-w-full overflow-hidden max-md:text-sm">
     <header>
       <h1 class="sr-only">鑲湧 HONG GI MANSION</h1>
+      <nav
+        class="nav-bar fixed top-0 z-50 flex w-full px-4 py-2 text-white xl:bg-black/25 xl:backdrop-blur-sm"
+      >
+        <label
+          id="burger-icon"
+          class="ml-auto flex size-[36px] flex-col justify-center gap-y-1.5 p-1 xl:hidden"
+          for="burger-menu-button"
+        >
+          <span class="h-[0.15rem] w-full rounded-xl bg-white/80"></span>
+          <span class="h-[0.15rem] w-full rounded-xl bg-white/80"></span>
+          <span class="h-[0.15rem] w-full rounded-xl bg-white/80"></span>
+        </label>
+        <input type="checkbox" id="burger-menu-button" class="peer hidden" />
+        <ul
+          class="menu fixed inset-x-0 bottom-0 top-[3.25rem] z-50 h-0 w-full overflow-hidden overscroll-contain px-8 transition-all duration-300 peer-checked:h-full max-xl:bg-black/60 max-xl:backdrop-blur-md xl:static xl:flex xl:size-full xl:grow xl:items-center xl:justify-end xl:bg-transparent xl:px-4 [&>li:not(:last-child)]:border-white/50 xl:[&>li:not(:last-child)]:border-r"
+        >
+          <li class="flex items-center justify-center max-xl:mt-10 xl:px-8">
+            <a
+              href="#section-2"
+              class="block grow py-6 text-center drop-shadow-sm transition-transform duration-200 hover:scale-105 xl:py-1.5"
+            >
+              水岸森活
+            </a>
+          </li>
+          <li class="flex items-center justify-center xl:px-8">
+            <a
+              href="#section-5"
+              class="block grow py-6 text-center drop-shadow-sm transition-transform duration-200 hover:scale-105 xl:py-1.5"
+            >
+              都會璀璨
+            </a>
+          </li>
+          <li class="flex items-center justify-center xl:px-8">
+            <a
+              id="scroll-to-easy-commuting"
+              href="#section-7"
+              class="block grow py-6 text-center drop-shadow-sm transition-transform duration-200 hover:scale-105 xl:py-1.5"
+            >
+              大師團隊
+            </a>
+          </li>
+          <li class="flex items-center justify-center xl:pl-8">
+            <a
+              href="#section-9"
+              class="block grow py-6 text-center drop-shadow-sm transition-transform duration-200 hover:scale-105 xl:py-1.5"
+            >
+              預約鑑賞
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
       <section
@@ -187,19 +293,19 @@
         class="relative h-screen w-full bg-[url('./assets/s1-bg.webp')] bg-cover bg-center bg-no-repeat"
       >
         <div
-          class="absolute inset-0 flex items-center justify-center bg-black/15 p-6"
+          class="absolute inset-0 flex justify-center bg-black/15 p-6 xl:items-center"
         >
-          <div class="text-center text-white xl:mt-[15vh]">
+          <div class="mt-[10vh] text-center text-white xl:mt-[15vh]">
             <img
               src="./assets/鑲涌.svg"
               alt="鑲涌 logo"
-              class="mx-auto xl:max-w-[300px]"
+              class="mx-auto max-w-[260px] xl:max-w-[300px]"
               data-aos="fade-up"
               data-aos-delay="300"
               data-aos-anchor="#section-1"
             />
             <h2
-              class="xl:ap-4 mt-10 flex items-center gap-2 text-3xl font-medium tracking-widest xl:text-6xl xl:tracking-[0.2em]"
+              class="xl:ap-4 mt-10 flex items-center justify-center gap-2 text-xl font-medium xl:text-6xl xl:tracking-[0.2em]"
               data-aos="fade-up"
               data-aos-delay="500"
               data-aos-anchor="#section-1"
@@ -209,7 +315,7 @@
               <span>樹河雍居</span>
             </h2>
             <p
-              class="mt-4 text-2xl font-medium tracking-widest xl:text-4xl"
+              class="mt-4 text-xl font-medium xl:text-4xl xl:tracking-widest"
               data-aos="fade-up"
               data-aos-delay="700"
               data-aos-anchor="#section-1"
@@ -219,7 +325,7 @@
             <img
               src="./assets/閎基建築.svg"
               alt="閎基建築"
-              class="mx-auto mt-[20vh] xl:mt-[25vh] xl:max-w-[300px]"
+              class="mx-auto mt-[15vh] xl:mt-[25vh] xl:max-w-[300px]"
               data-aos="fade"
               data-aos-delay="700"
               data-aos-anchor="#section-1"
@@ -230,10 +336,11 @@
 
       <section
         id="section-2"
-        class="with-stable-padding relative min-h-screen w-full bg-[url('./assets/green-bg-2.webp')] bg-contain bg-center bg-repeat xl:flex xl:flex-row-reverse"
+        class="with-stable-padding relative h-[calc(100vh-69px)] w-full bg-[url('./assets/green-bg-2.webp')] bg-contain bg-center bg-repeat xl:flex xl:h-auto xl:min-h-screen xl:flex-row-reverse xl:!pb-96"
       >
         <div class="relative z-10 flex flex-col text-white xl:mt-40">
           <p
+            class="mt-2 leading-tight"
             data-aos="fade-up"
             data-aos-delay="300"
             data-aos-anchor="#section-2"
@@ -241,7 +348,7 @@
             DANCING <br />HOUSE
           </p>
           <h2
-            class="my-10 text-2xl/relaxed font-semibold tracking-widest xl:my-12 xl:text-3xl/relaxed"
+            class="my-6 text-lg/relaxed font-semibold xl:my-12 xl:text-3xl/relaxed xl:tracking-widest"
             data-aos="fade-up"
             data-aos-delay="400"
             data-aos-anchor="#section-2"
@@ -253,7 +360,7 @@
             <span>藝術雕塑</span>
           </h2>
           <p
-            class="font-medium leading-loose tracking-widest"
+            class="font-medium leading-loose max-md:text-[12px] xl:tracking-widest"
             data-aos="fade-up"
             data-aos-delay="500"
             data-aos-anchor="#section-2"
@@ -267,31 +374,34 @@
             <span>萬物鑲嵌於此，共奏一曲與自然相擁的建築舞曲。</span>
           </p>
           <p
-            class="mt-10 text-lg"
+            class="mt-6 xl:mt-10 xl:text-lg"
             data-aos="fade-up"
             data-aos-delay="600"
             data-aos-anchor="#section-2"
           >
             / 水岸建築
           </p>
-          <img
-            src="./assets/building-draft-2.svg"
-            alt="外觀輪廓"
-            class="hidden xl:mt-24 xl:block xl:translate-x-[-5vw] xl:scale-125"
-            data-aos="fade-up"
-            data-aos-delay="900"
-            data-aos-anchor="#section-2"
-          />
-          <img
-            src="./assets/fish.svg"
-            alt="fish"
-            class="ml-[18vw] hidden size-28 xl:block xl:size-36 xl:translate-y-28"
-          />
         </div>
+        <img
+          src="./assets/building-draft-2.svg"
+          alt="外觀輪廓"
+          class="absolute bottom-[15vh] right-0 w-[40vw] xl:bottom-[10vh] xl:right-[12vw] xl:w-[30vw] 2xl:w-[20vw]"
+          data-aos="fade-up"
+          data-aos-delay="900"
+          data-aos-anchor="#section-2"
+        />
+        <img
+          src="./assets/fish.svg"
+          alt="fish"
+          class="absolute bottom-0 right-4 size-16 md:size-24 xl:bottom-[-2vh] xl:right-[10vw]"
+          data-aos="fade"
+          data-aos-delay="900"
+          data-aos-anchor="#section-2"
+        />
         <img
           src="./assets/building-draft-1.svg"
           alt="外觀輪廓"
-          class="absolute inset-x-0 bottom-[5%] md:top-[5%] md:ml-20 md:max-w-[700px] xl:static xl:top-[20%] xl:-ml-20 xl:mr-auto 2xl:max-w-[850px] 2xl:scale-110"
+          class="absolute bottom-[2vh] left-0 w-[65vw] xl:-left-[5vw] xl:bottom-0 xl:w-[52vw] 2xl:left-10 2xl:w-[45vw]"
           data-aos="fade-up"
           data-aos-delay="900"
           data-aos-anchor="#section-2"
@@ -299,7 +409,7 @@
         <img
           src="./assets/fly-bird.svg"
           alt="fly-birds"
-          class="absolute right-0 top-40 size-24 md:left-[80vw] xl:left-[44vw] xl:top-72 xl:size-32"
+          class="absolute bottom-[40vh] right-[26vw] size-14 xl:bottom-[unset] xl:right-[50vw] xl:top-[26vh] xl:size-32"
           data-aos="fade-left"
           data-aos-delay="900"
           data-aos-anchor="#section-2"
@@ -320,7 +430,7 @@
                   <img
                     src="./assets/spiral.svg"
                     alt="spiral"
-                    class="absolute -top-6 left-32 size-20 xl:-top-16 xl:left-[unset] xl:right-28 xl:size-28"
+                    class="absolute -top-4 left-28 size-16 xl:-top-16 xl:left-[unset] xl:right-28 xl:size-28"
                     data-aos="fade"
                     data-aos-delay="900"
                     data-aos-anchor="#section-3"
@@ -333,7 +443,7 @@
                     HIGH-RISE <br />LANDMARK
                   </p>
                   <h2
-                    class="my-10 text-2xl/relaxed font-semibold leading-snug tracking-widest xl:mb-24 xl:mt-10 xl:text-3xl/relaxed"
+                    class="my-6 text-xl/relaxed font-semibold leading-snug xl:mb-24 xl:mt-10 xl:text-3xl/relaxed xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="700"
                     data-aos-anchor="#section-3"
@@ -343,7 +453,7 @@
                     <span>20層地標 眺山望海</span>
                   </h2>
                   <p
-                    class="font-medium leading-loose tracking-widest xl:mt-auto"
+                    class="font-medium leading-loose xl:mt-auto xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="900"
                     data-aos-anchor="#section-3"
@@ -399,7 +509,7 @@
                   <img
                     src="./assets/spiral.svg"
                     alt="spiral"
-                    class="absolute -top-6 left-36 size-20 xl:-top-16 xl:left-[unset] xl:right-28 xl:size-28"
+                    class="absolute -top-4 left-36 size-16 xl:-top-16 xl:left-[unset] xl:right-28 xl:size-28"
                     data-aos="fade"
                     data-aos-delay="900"
                     data-aos-anchor="#section-3"
@@ -412,7 +522,7 @@
                     INTERNATIONAL <br />WATERFRONT
                   </p>
                   <h2
-                    class="my-10 text-2xl/relaxed font-semibold leading-snug tracking-widest xl:mb-16 xl:mt-10 xl:text-3xl/relaxed"
+                    class="my-6 text-xl/relaxed font-semibold leading-snug xl:mb-16 xl:mt-10 xl:text-3xl/relaxed xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="700"
                     data-aos-anchor="#section-3"
@@ -425,7 +535,7 @@
                     data-aos="fade-up"
                     data-aos-delay="900"
                     data-aos-anchor="#section-3"
-                    class="text-lg font-semibold leading-snug tracking-widest xl:mt-4"
+                    class="text-lg font-semibold leading-snug max-xl:mb-6 xl:mt-4 xl:tracking-widest"
                   >
                     客雅溪綠帶公園 持續進化中
                   </h3>
@@ -433,7 +543,7 @@
                     data-aos="fade-up"
                     data-aos-delay="1200"
                     data-aos-anchor="#section-3"
-                    class="font-medium leading-loose tracking-widest xl:mt-auto"
+                    class="font-medium leading-loose xl:mt-auto xl:tracking-widest"
                   >
                     <span>
                       看齊國際都市溪流再生計畫，如荷蘭Buiksloterham水岸再生、
@@ -516,6 +626,11 @@
               class="animate-fade sticky left-1/2 top-1/2 size-16 -translate-x-1/2 -translate-y-1/2"
             />
           </div>
+          <span
+            class="absolute bottom-0 right-0 bg-black/50 px-2 py-1 text-white"
+          >
+            空拍實景經電腦合成
+          </span>
         </div>
       </section>
 
@@ -527,7 +642,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="xl:flex xl:items-stretch xl:justify-between">
-                <div class="text-white xl:mt-auto xl:w-1/3">
+                <div class="text-white xl:mt-auto xl:w-[458px]">
                   <div class="relative">
                     <img
                       src="./assets/spiral-2.svg"
@@ -538,7 +653,7 @@
                       data-aos-anchor="#section-5"
                     />
                     <p
-                      class="mb-12"
+                      class="xl:mb-12"
                       data-aos="fade-up"
                       data-aos-delay="300"
                       data-aos-anchor="#section-5"
@@ -548,7 +663,7 @@
                     </p>
                   </div>
                   <h2
-                    class="my-10 text-2xl/relaxed font-semibold leading-snug tracking-widest xl:mb-16 xl:mt-10 xl:text-3xl/relaxed"
+                    class="my-6 text-xl/relaxed font-semibold leading-snug xl:mb-16 xl:mt-10 xl:text-3xl/relaxed xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="500"
                     data-aos-anchor="#section-5"
@@ -558,7 +673,7 @@
                     <span>中山路一線縱享</span>
                   </h2>
                   <p
-                    class="mb-10 font-medium leading-loose tracking-widest xl:mb-16 xl:w-4/5"
+                    class="mb-6 font-medium leading-loose xl:mb-16 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="700"
                     data-aos-anchor="#section-4"
@@ -585,7 +700,7 @@
                   data-aos-delay="900"
                   data-aos-anchor="#section-5"
                 >
-                  <div class="my-6 grid xl:mb-3 xl:mt-0">
+                  <div class="my-6 grid max-xl:mb-2 xl:mb-3 xl:mt-0">
                     <div
                       class="img-with-caption-w"
                       data-caption="巨城購物中心實景"
@@ -597,7 +712,7 @@
                       />
                     </div>
                   </div>
-                  <div class="grid gap-x-2 gap-y-6 xl:grid-cols-2">
+                  <div class="grid grid-cols-2 gap-2 xl:gap-y-6">
                     <div
                       class="img-with-caption-w"
                       data-caption="新竹大遠百實景"
@@ -624,7 +739,7 @@
             </div>
             <div class="swiper-slide">
               <div class="xl:flex xl:items-stretch xl:justify-between">
-                <div class="text-white xl:mt-auto xl:w-1/3">
+                <div class="text-white xl:mt-auto xl:w-[458px]">
                   <div class="relative">
                     <img
                       src="./assets/spiral-2.svg"
@@ -635,7 +750,7 @@
                       data-aos-anchor="#section-5"
                     />
                     <p
-                      class="mb-12"
+                      class="xl:mb-12"
                       data-aos="fade-up"
                       data-aos-delay="300"
                       data-aos-anchor="#section-5"
@@ -645,7 +760,7 @@
                     </p>
                   </div>
                   <h2
-                    class="my-10 text-2xl/relaxed font-semibold leading-snug tracking-widest xl:mb-16 xl:mt-10 xl:text-3xl/relaxed"
+                    class="my-6 text-xl/relaxed font-semibold leading-snug xl:mb-16 xl:mt-10 xl:text-3xl/relaxed xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="500"
                     data-aos-anchor="#section-5"
@@ -655,7 +770,7 @@
                     <span>四大縱貫道路交匯</span>
                   </h2>
                   <p
-                    class="mb-10 font-medium leading-loose tracking-widest xl:mb-16 xl:w-4/5"
+                    class="mb-6 font-medium leading-loose xl:mb-16 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="700"
                     data-aos-anchor="#section-5"
@@ -677,26 +792,29 @@
                   </button>
                 </div>
                 <div
-                  class="mt-6 grid gap-y-3 xl:w-1/2"
+                  class="mt-6 grid gap-y-2 xl:mt-0 xl:w-1/2"
                   data-aos="fade-left"
                   data-aos-delay="300"
                   data-aos-anchor="#section-5"
                 >
-                  <div class="img-with-caption-w" data-caption="經國路街廓實景">
+                  <div
+                    class="img-with-caption-w max-xl:max-w-[70%]"
+                    data-caption="經國路街廓實景"
+                  >
                     <img
                       src="./assets/經國路街廓實景.webp"
                       alt="經國路街廓實景"
-                      class="aspect-[5/3] object-cover object-top xl:aspect-[5/2]"
+                      class="aspect-[5/3] size-full object-cover object-top xl:aspect-[5/2]"
                     />
                   </div>
                   <div
-                    class="img-with-caption-w-l"
+                    class="img-with-caption-w-l max-xl:ml-auto max-xl:max-w-[70%]"
                     data-caption="茄苳景觀大道實景"
                   >
                     <img
                       src="./assets/茄苳景觀大道實景.webp"
                       alt="茄苳景觀大道實景"
-                      class="aspect-[5/3] object-cover object-top xl:aspect-[5/2]"
+                      class="aspect-[5/3] size-full object-cover object-top xl:aspect-[5/2]"
                     />
                   </div>
                 </div>
@@ -704,7 +822,9 @@
             </div>
             <div class="swiper-slide">
               <div class="xl:flex xl:items-stretch xl:justify-between">
-                <div class="text-white xl:mt-auto xl:flex xl:w-1/3 xl:flex-col">
+                <div
+                  class="text-white xl:mt-auto xl:flex xl:w-[458px] xl:flex-col"
+                >
                   <div class="relative">
                     <img
                       src="./assets/spiral-2.svg"
@@ -715,7 +835,7 @@
                       data-aos-anchor="#section-5"
                     />
                     <p
-                      class="mb-12"
+                      class="xl:mb-12"
                       data-aos="fade-up"
                       data-aos-delay="300"
                       data-aos-anchor="#section-5"
@@ -725,7 +845,7 @@
                     </p>
                   </div>
                   <h2
-                    class="mb-6 mt-10 text-2xl/relaxed font-semibold leading-snug tracking-widest xl:text-3xl/relaxed"
+                    class="my-6 text-xl/relaxed font-semibold leading-snug xl:text-3xl/relaxed xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="500"
                     data-aos-anchor="#section-5"
@@ -735,7 +855,7 @@
                     <span>4000坪商業住宅</span>
                   </h2>
                   <h3
-                    class="mb-10 text-xl font-semibold leading-snug tracking-widest xl:mb-24"
+                    class="mb-6 text-xl font-semibold leading-snug xl:mb-24 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="700"
                     data-aos-anchor="#section-5"
@@ -743,7 +863,7 @@
                     日系商圈加持，打造新型生活商業體驗
                   </h3>
                   <p
-                    class="mb-10 font-medium leading-loose tracking-widest xl:mb-16 xl:w-4/5"
+                    class="my-6 font-medium leading-loose xl:mb-16 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="900"
                     data-aos-anchor="#section-5"
@@ -781,7 +901,7 @@
             </div>
             <div class="swiper-slide">
               <div class="xl:flex xl:items-stretch xl:justify-between">
-                <div class="text-white xl:mt-auto xl:w-1/3">
+                <div class="text-white xl:mt-auto xl:w-[458px]">
                   <div class="relative">
                     <img
                       src="./assets/spiral-2.svg"
@@ -793,7 +913,7 @@
                       data-aos-anchor="#section-5"
                     />
                     <p
-                      class="mb-12"
+                      class="xl:mb-12"
                       data-aos="fade-up"
                       data-aos-delay="300"
                       data-aos-anchor="#section-5"
@@ -803,7 +923,7 @@
                     </p>
                   </div>
                   <h2
-                    class="mb-6 mt-10 text-2xl/relaxed font-semibold leading-snug tracking-widest xl:text-3xl/relaxed"
+                    class="my-6 text-xl/relaxed font-semibold leading-snug xl:text-3xl/relaxed xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="300"
                     data-aos-anchor="#section-5"
@@ -813,7 +933,7 @@
                     <span>亞洲矽谷逐步實踐</span>
                   </h2>
                   <h3
-                    class="mb-10 text-xl font-semibold leading-snug tracking-widest xl:mb-24"
+                    class="mb-6 text-xl font-semibold leading-snug xl:mb-24 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="500"
                     data-aos-anchor="#section-5"
@@ -821,7 +941,7 @@
                     『X基地』『生醫園區』 『AI智慧園區』
                   </h3>
                   <p
-                    class="mb-10 font-medium leading-loose tracking-widest xl:mb-16 xl:w-4/5"
+                    class="mb-6 font-medium leading-loose xl:mb-16 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="700"
                     data-aos-anchor="#section-5"
@@ -849,7 +969,7 @@
                   data-aos-anchor="#section-5"
                 >
                   <div
-                    class="img-with-caption-w my-6 grid xl:mb-3 xl:mt-0"
+                    class="img-with-caption-w mb-2 mt-6 grid xl:mb-3 xl:mt-0"
                     data-caption="AI智慧園區實景"
                   >
                     <img
@@ -858,7 +978,7 @@
                       class="aspect-[5/3] object-cover object-top xl:aspect-video"
                     />
                   </div>
-                  <div class="grid gap-x-2 gap-y-6 xl:grid-cols-2">
+                  <div class="grid grid-cols-2 gap-2 xl:gap-y-6">
                     <div class="img-with-caption-w" data-caption="生醫園區實景">
                       <img
                         src="./assets/生醫園區實景.webp"
@@ -905,7 +1025,7 @@
         <div class="flex flex-col items-center text-white">
           <div class="xl:mb-16">
             <h2
-              class="mb-3 flex items-center gap-4 text-3xl font-semibold tracking-widest"
+              class="mb-3 flex items-center gap-4 text-xl font-semibold xl:tracking-widest"
               data-aos="fade-up"
               data-aos-delay="400"
               data-aos-anchor="#section-6"
@@ -915,7 +1035,7 @@
               <span>環環相扣</span>
             </h2>
             <p
-              class="mb-10 text-center text-2xl font-semibold tracking-widest xl:mb-0 xl:text-3xl"
+              class="mb-10 text-center text-xl font-semibold xl:mb-0 xl:text-3xl xl:tracking-widest"
               data-aos="fade-up"
               data-aos-delay="500"
               data-aos-anchor="#section-6"
@@ -1072,13 +1192,13 @@
                     建築規劃
                   </p>
                   <h2
-                    class="mb-6 mt-10 flex flex-col gap-y-2 font-semibold leading-snug tracking-widest"
+                    class="mb-6 mt-10 flex flex-col gap-y-2 font-semibold leading-snug xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="500"
                     data-aos-anchor="#section-7"
                   >
-                    <span class="text-3xl">木木建築設計事務所</span>
-                    <span class="text-2xl">林秉翰建築師</span>
+                    <span class="text-xl">木木建築設計事務所</span>
+                    <span class="text-xl">林秉翰建築師</span>
                   </h2>
                   <img
                     src="./assets/林秉翰建築師.webp"
@@ -1089,7 +1209,7 @@
                     data-aos-anchor="#section-7"
                   />
                   <div
-                    class="mb-10 mt-6 font-medium leading-relaxed tracking-widest xl:mt-10"
+                    class="mb-10 mt-6 font-medium leading-relaxed xl:mt-10 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="900"
                     data-aos-anchor="#section-7"
@@ -1105,7 +1225,7 @@
                     data-aos-anchor="#section-7"
                   >
                     <div class="mb-4 xl:mb-0">
-                      <span class="mr-2 text-2xl font-semibold">Portfolio</span>
+                      <span class="mr-2 text-xl font-semibold">Portfolio</span>
                       <span class="text-lg">/ 經典業績</span>
                     </div>
                     <ul class="space-y-2">
@@ -1158,7 +1278,7 @@
                     </div>
                   </div>
                   <div
-                    class="xl:text text-vertical mt-2 text-xl font-semibold leading-relaxed tracking-widest xl:ml-10"
+                    class="xl:text text-vertical mt-2 text-xl font-semibold leading-relaxed xl:ml-10 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="500"
                     data-aos-anchor="#section-7"
@@ -1198,13 +1318,13 @@
                     建築外觀
                   </p>
                   <h2
-                    class="mb-6 mt-10 flex flex-col gap-y-2 font-semibold leading-snug tracking-widest"
+                    class="mb-6 mt-10 flex flex-col gap-y-2 font-semibold leading-snug xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="900"
                     data-aos-anchor="#section-7"
                   >
-                    <span class="text-3xl">林淵源建築師事務所</span>
-                    <span class="text-2xl">林淵源建築師</span>
+                    <span class="text-xl">林淵源建築師事務所</span>
+                    <span class="text-xl">林淵源建築師</span>
                   </h2>
                   <img
                     src="./assets/林淵源建築師.webp"
@@ -1215,7 +1335,7 @@
                     data-aos-anchor="#section-7"
                   />
                   <div
-                    class="mb-10 mt-6 font-medium leading-relaxed tracking-widest xl:mt-10"
+                    class="mb-10 mt-6 font-medium leading-relaxed xl:mt-10 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="1500"
                     data-aos-anchor="#section-7"
@@ -1234,7 +1354,7 @@
                     data-aos-anchor="#section-7"
                   >
                     <div class="mb-6 xl:mb-4">
-                      <span class="mb-4 mr-2 text-2xl font-semibold"
+                      <span class="mb-4 mr-2 text-xl font-semibold"
                         >Portfolio</span
                       >
                       <span class="text-lg">/ 經典業績</span>
@@ -1293,7 +1413,7 @@
                     </div>
                   </div>
                   <div
-                    class="xl:text mt-2 text-xl font-semibold leading-relaxed tracking-widest xl:mt-10"
+                    class="xl:text mt-2 text-xl font-semibold leading-relaxed xl:mt-10 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="300"
                     data-aos-anchor="#section-7"
@@ -1332,13 +1452,13 @@
                     景觀公設
                   </p>
                   <h2
-                    class="mb-6 mt-10 flex flex-col gap-y-2 font-semibold leading-snug tracking-widest"
+                    class="mb-6 mt-10 flex flex-col gap-y-2 font-semibold leading-snug xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="700"
                     data-aos-anchor="#section-7"
                   >
-                    <span class="text-3xl">玖柞設計</span>
-                    <span class="text-2xl">蔡雅怡總監</span>
+                    <span class="text-xl">玖柞設計</span>
+                    <span class="text-xl">蔡雅怡總監</span>
                   </h2>
                   <img
                     src="./assets/蔡雅怡總監.webp"
@@ -1349,7 +1469,7 @@
                     data-aos-anchor="#section-7"
                   />
                   <div
-                    class="mb-10 mt-6 font-medium leading-relaxed tracking-widest xl:mt-10"
+                    class="mb-10 mt-6 font-medium leading-relaxed xl:mt-10 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="1200"
                     data-aos-anchor="#section-7"
@@ -1365,7 +1485,7 @@
                     data-aos-anchor="#section-7"
                   >
                     <div class="mb-6 xl:mb-4">
-                      <span class="mb-4 mr-2 text-2xl font-semibold"
+                      <span class="mb-4 mr-2 text-xl font-semibold"
                         >Portfolio</span
                       >
                       <span class="text-lg">/ 代表作品</span>
@@ -1431,7 +1551,7 @@
                     data-aos-anchor="#section-7"
                   >
                     <div class="mb-6 xl:mb-4">
-                      <span class="mr-2 text-2xl font-semibold">Award</span>
+                      <span class="mr-2 text-xl font-semibold">Award</span>
                       <span class="text-lg">/ 得獎經歷</span>
                     </div>
                     <ul class="space-y-2 xl:text-sm">
@@ -1480,7 +1600,7 @@
             data-aos-anchor="#section-9"
           >
             <span class="block">Information</span>
-            <span class="block text-3xl">基本資料</span>
+            <span class="block text-xl">基本資料</span>
           </h2>
           <ul
             class="space-y-5 xl:space-y-2"
@@ -1507,14 +1627,14 @@
                 class="mb-1 block shrink-0 max-xl:text-lg max-xl:font-semibold"
                 >規劃坪數</span
               >
-              <span class="block">25-38坪</span>
+              <span class="block">25-37坪</span>
             </li>
             <li class="font-semibold xl:flex xl:gap-x-6">
               <span
                 class="mb-1 block shrink-0 max-xl:text-lg max-xl:font-semibold"
                 >投資興建</span
               >
-              <span class="block">禾逸開發股份有限公司</span>
+              <span class="block">閎基建築機構－禾逸開發股份有限公司</span>
             </li>
             <li class="font-semibold xl:flex xl:gap-x-6">
               <span
@@ -1560,7 +1680,7 @@
             data-aos-anchor="#section-9"
           >
             <span class="block">Reservation</span>
-            <span class="block text-3xl">立即預約</span>
+            <span class="block text-xl">立即預約</span>
           </h2>
           <form
             id="form"
@@ -1774,7 +1894,6 @@
             slidesPerView: 1,
             spaceBetween: 400,
             allowTouchMove: false,
-            autoHeight: true,
           });
 
           $(btnSelector).click(() => {
@@ -1803,6 +1922,11 @@
             $(nextEl).addClass("active");
           }, 2800);
         }
+
+        $("#burger-icon").on("click", () => {
+          $("#burger-icon").toggleClass("open");
+          $("#nav").toggleClass("open");
+        });
 
         initGallery("#gallery-1");
         initGallery("#gallery-2");

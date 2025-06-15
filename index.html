@@ -208,6 +208,10 @@
         opacity: 100%;
       }
 
+      .text-vertical {
+        writing-mode: vertical-rl;
+      }
+
       @media (min-width: 1024px) {
         .with-stable-padding {
           padding: 6rem 8rem;
@@ -215,10 +219,6 @@
       }
 
       @media (min-width: 1280px) {
-        .text-vertical {
-          writing-mode: vertical-rl;
-        }
-
         .xl-with-stable-padding {
           padding: 10rem 12rem;
         }
@@ -249,7 +249,7 @@
         </label>
         <input type="checkbox" id="burger-menu-button" class="peer hidden" />
         <ul
-          class="menu fixed inset-x-0 bottom-0 top-[3.25rem] z-50 h-0 w-full overflow-hidden overscroll-contain px-8 transition-all duration-300 peer-checked:h-full max-xl:bg-black/60 max-xl:backdrop-blur-md xl:static xl:flex xl:size-full xl:grow xl:items-center xl:justify-end xl:bg-transparent xl:px-4 [&>li:not(:last-child)]:border-white/50 xl:[&>li:not(:last-child)]:border-r"
+          class="menu fixed inset-x-0 top-[3.25rem] bottom-0 z-50 h-0 w-full overflow-hidden overscroll-contain px-8 transition-all duration-300 peer-checked:h-full max-xl:bg-black/60 max-xl:backdrop-blur-md xl:static xl:flex xl:size-full xl:grow xl:items-center xl:justify-end xl:bg-transparent xl:px-4 [&>li:not(:last-child)]:border-white/50 xl:[&>li:not(:last-child)]:border-r"
         >
           <li class="flex items-center justify-center max-xl:mt-10 xl:px-8">
             <a
@@ -360,7 +360,7 @@
             <span>藝術雕塑</span>
           </h2>
           <p
-            class="font-medium leading-loose max-md:text-[12px] xl:tracking-widest"
+            class="leading-loose font-medium max-md:text-[12px] xl:tracking-widest"
             data-aos="fade-up"
             data-aos-delay="500"
             data-aos-anchor="#section-2"
@@ -385,7 +385,7 @@
         <img
           src="./assets/building-draft-2.svg"
           alt="外觀輪廓"
-          class="absolute bottom-[15vh] right-0 w-[40vw] xl:bottom-[10vh] xl:right-[12vw] xl:w-[30vw] 2xl:w-[20vw]"
+          class="absolute right-0 bottom-[15vh] w-[40vw] xl:right-[12vw] xl:bottom-[10vh] xl:w-[30vw] 2xl:w-[20vw]"
           data-aos="fade-up"
           data-aos-delay="900"
           data-aos-anchor="#section-2"
@@ -393,7 +393,7 @@
         <img
           src="./assets/fish.svg"
           alt="fish"
-          class="absolute bottom-0 right-4 size-16 md:size-24 xl:bottom-[-2vh] xl:right-[10vw]"
+          class="absolute right-4 bottom-0 size-16 md:size-24 xl:right-[10vw] xl:bottom-[-2vh]"
           data-aos="fade"
           data-aos-delay="900"
           data-aos-anchor="#section-2"
@@ -401,7 +401,7 @@
         <img
           src="./assets/building-draft-1.svg"
           alt="外觀輪廓"
-          class="absolute bottom-[2vh] left-0 w-[65vw] xl:-left-[5vw] xl:bottom-0 xl:w-[52vw] 2xl:left-10 2xl:w-[45vw]"
+          class="absolute bottom-[2vh] left-0 w-[65vw] xl:bottom-0 xl:-left-[5vw] xl:w-[52vw] 2xl:left-10 2xl:w-[45vw]"
           data-aos="fade-up"
           data-aos-delay="900"
           data-aos-anchor="#section-2"
@@ -409,7 +409,7 @@
         <img
           src="./assets/fly-bird.svg"
           alt="fly-birds"
-          class="absolute bottom-[40vh] right-[26vw] size-14 xl:bottom-[unset] xl:right-[50vw] xl:top-[26vh] xl:size-32"
+          class="absolute right-[26vw] bottom-[40vh] size-14 xl:top-[26vh] xl:right-[50vw] xl:bottom-[unset] xl:size-32"
           data-aos="fade-left"
           data-aos-delay="900"
           data-aos-anchor="#section-2"
@@ -430,7 +430,7 @@
                   <img
                     src="./assets/spiral.svg"
                     alt="spiral"
-                    class="absolute -top-4 left-28 size-16 xl:-top-16 xl:left-[unset] xl:right-28 xl:size-28"
+                    class="absolute -top-4 left-28 size-16 xl:-top-16 xl:right-28 xl:left-[unset] xl:size-28"
                     data-aos="fade"
                     data-aos-delay="900"
                     data-aos-anchor="#section-3"
@@ -443,7 +443,7 @@
                     HIGH-RISE <br />LANDMARK
                   </p>
                   <h2
-                    class="my-6 text-xl/relaxed font-semibold leading-snug xl:mb-24 xl:mt-10 xl:text-2xl/relaxed xl:tracking-widest"
+                    class="my-6 text-xl/relaxed leading-snug font-semibold xl:mt-10 xl:mb-24 xl:text-2xl/relaxed xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="700"
                     data-aos-anchor="#section-3"
@@ -453,7 +453,7 @@
                     <span>20層地標 眺山望海</span>
                   </h2>
                   <p
-                    class="font-medium leading-loose xl:mb-6 xl:mt-auto xl:tracking-widest"
+                    class="leading-loose font-medium xl:mt-auto xl:mb-6 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="900"
                     data-aos-anchor="#section-3"
@@ -483,7 +483,7 @@
                 </div>
                 <div
                   id="gallery-1"
-                  class="relative mt-6 xl:order-first xl:mb-10 xl:mt-auto xl:w-[50%]"
+                  class="relative mt-6 xl:order-first xl:mt-auto xl:mb-10 xl:w-[50%]"
                   data-aos="fade-right"
                   data-aos-delay="900"
                   data-aos-anchor="#section-3"
@@ -509,7 +509,7 @@
                   <img
                     src="./assets/spiral.svg"
                     alt="spiral"
-                    class="absolute -top-4 left-36 size-16 xl:-top-16 xl:left-[unset] xl:right-28 xl:size-28"
+                    class="absolute -top-4 left-36 size-16 xl:-top-16 xl:right-28 xl:left-[unset] xl:size-28"
                     data-aos="fade"
                     data-aos-delay="900"
                     data-aos-anchor="#section-3"
@@ -522,7 +522,7 @@
                     INTERNATIONAL <br />WATERFRONT
                   </p>
                   <h2
-                    class="my-6 text-xl/relaxed font-semibold leading-snug xl:mt-4 xl:text-2xl/relaxed xl:tracking-widest"
+                    class="my-6 text-xl/relaxed leading-snug font-semibold xl:mt-4 xl:text-2xl/relaxed xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="700"
                     data-aos-anchor="#section-3"
@@ -535,7 +535,7 @@
                     data-aos="fade-up"
                     data-aos-delay="900"
                     data-aos-anchor="#section-3"
-                    class="text-lg font-semibold leading-snug max-xl:mb-6 xl:tracking-widest"
+                    class="text-lg leading-snug font-semibold max-xl:mb-6 xl:tracking-widest"
                   >
                     客雅溪綠帶公園 持續進化中
                   </h3>
@@ -543,7 +543,7 @@
                     data-aos="fade-up"
                     data-aos-delay="1200"
                     data-aos-anchor="#section-3"
-                    class="font-medium leading-loose xl:mb-6 xl:mt-auto xl:tracking-widest"
+                    class="leading-loose font-medium xl:mt-auto xl:mb-6 xl:tracking-widest"
                   >
                     <span>
                       看齊國際都市溪流再生計畫，如荷蘭Buiksloterham水岸再生、
@@ -572,7 +572,7 @@
                 </div>
                 <div
                   id="gallery-2"
-                  class="relative mt-6 xl:order-first xl:mb-10 xl:mt-auto xl:w-[50%]"
+                  class="relative mt-6 xl:order-first xl:mt-auto xl:mb-10 xl:w-[50%]"
                   data-aos="fade-right"
                   data-aos-delay="1200"
                   data-aos-anchor="#section-3"
@@ -606,19 +606,19 @@
 
       <section id="section-4" class="overflow-x-auto xl:overflow-hidden">
         <div
-          class="relative flex aspect-video size-full min-w-[1200px] max-w-full bg-[url('./assets/空拍.webp')] bg-cover bg-center bg-no-repeat lg:min-w-[2000px] xl:min-w-[unset]"
+          class="relative flex aspect-video size-full max-w-full min-w-[1200px] bg-[url('./assets/空拍.webp')] bg-cover bg-center bg-no-repeat lg:min-w-[2000px] xl:min-w-[unset]"
         >
           <div
-            class="mask absolute left-0 top-0 z-10 size-full overscroll-contain bg-black/30 lg:hidden"
+            class="mask absolute top-0 left-0 z-10 size-full overscroll-contain bg-black/30 lg:hidden"
           >
             <img
               src="./assets/swipe.svg"
               alt="左右滑動"
-              class="animate-fade sticky left-1/2 top-1/2 size-16 -translate-x-1/2 -translate-y-1/2"
+              class="animate-fade sticky top-1/2 left-1/2 size-16 -translate-x-1/2 -translate-y-1/2"
             />
           </div>
           <span
-            class="absolute bottom-0 right-0 bg-black/50 px-2 py-1 text-white"
+            class="absolute right-0 bottom-0 bg-black/50 px-2 py-1 text-white"
           >
             空拍實景經電腦合成
           </span>
@@ -640,7 +640,7 @@
                     <img
                       src="./assets/spiral-2.svg"
                       alt="spiral"
-                      class="absolute -top-6 left-52 size-20 xl:-top-16 xl:left-[unset] xl:right-40 xl:size-28"
+                      class="absolute -top-6 left-52 size-20 xl:-top-16 xl:right-40 xl:left-[unset] xl:size-28"
                       data-aos="fade"
                       data-aos-delay="900"
                       data-aos-anchor="#section-5"
@@ -656,7 +656,7 @@
                     </p>
                   </div>
                   <h2
-                    class="my-6 text-xl/relaxed font-semibold leading-snug xl:mb-16 xl:mt-10 xl:text-2xl/relaxed xl:tracking-widest"
+                    class="my-6 text-xl/relaxed leading-snug font-semibold xl:mt-10 xl:mb-16 xl:text-2xl/relaxed xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="500"
                     data-aos-anchor="#section-5"
@@ -666,7 +666,7 @@
                     <span>中山路一線縱享</span>
                   </h2>
                   <p
-                    class="font-medium leading-loose xl:mb-16 xl:tracking-widest"
+                    class="leading-loose font-medium xl:mb-16 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="700"
                     data-aos-anchor="#section-4"
@@ -695,7 +695,7 @@
                   data-aos-delay="900"
                   data-aos-anchor="#section-5"
                 >
-                  <div class="my-6 grid max-xl:mb-2 xl:mb-3 xl:mt-0">
+                  <div class="my-6 grid max-xl:mb-2 xl:mt-0 xl:mb-3">
                     <div
                       class="img-with-caption-w"
                       data-caption="巨城購物中心實景"
@@ -741,7 +741,7 @@
                     <img
                       src="./assets/spiral-2.svg"
                       alt="spiral"
-                      class="absolute -top-6 left-52 size-20 xl:-top-16 xl:left-[unset] xl:right-40 xl:size-28"
+                      class="absolute -top-6 left-52 size-20 xl:-top-16 xl:right-40 xl:left-[unset] xl:size-28"
                       data-aos="fade"
                       data-aos-delay="900"
                       data-aos-anchor="#section-5"
@@ -757,7 +757,7 @@
                     </p>
                   </div>
                   <h2
-                    class="my-6 text-xl/relaxed font-semibold leading-snug xl:mb-16 xl:mt-10 xl:text-2xl/relaxed xl:tracking-widest"
+                    class="my-6 text-xl/relaxed leading-snug font-semibold xl:mt-10 xl:mb-16 xl:text-2xl/relaxed xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="500"
                     data-aos-anchor="#section-5"
@@ -767,7 +767,7 @@
                     <span>四大縱貫道路交匯</span>
                   </h2>
                   <p
-                    class="font-medium leading-loose xl:mb-16 xl:tracking-widest"
+                    class="leading-loose font-medium xl:mb-16 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="700"
                     data-aos-anchor="#section-5"
@@ -830,7 +830,7 @@
                     <img
                       src="./assets/spiral-2.svg"
                       alt="spiral"
-                      class="absolute -top-6 left-52 size-20 xl:-top-16 xl:left-[unset] xl:right-40 xl:size-28"
+                      class="absolute -top-6 left-52 size-20 xl:-top-16 xl:right-40 xl:left-[unset] xl:size-28"
                       data-aos="fade"
                       data-aos-delay="900"
                       data-aos-anchor="#section-5"
@@ -846,7 +846,7 @@
                     </p>
                   </div>
                   <h2
-                    class="my-6 text-xl/relaxed font-semibold leading-snug xl:text-2xl/relaxed xl:tracking-widest"
+                    class="my-6 text-xl/relaxed leading-snug font-semibold xl:text-2xl/relaxed xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="500"
                     data-aos-anchor="#section-5"
@@ -856,7 +856,7 @@
                     <span>4000坪商業住宅</span>
                   </h2>
                   <h3
-                    class="mb-6 text-xl font-semibold leading-snug xl:mb-24 xl:tracking-widest"
+                    class="mb-6 text-xl leading-snug font-semibold xl:mb-24 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="700"
                     data-aos-anchor="#section-5"
@@ -864,7 +864,7 @@
                     日系商圈加持，打造新型生活商業體驗
                   </h3>
                   <p
-                    class="mt-6 font-medium leading-loose xl:mb-16 xl:tracking-widest"
+                    class="mt-6 leading-loose font-medium xl:mb-16 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="900"
                     data-aos-anchor="#section-5"
@@ -911,7 +911,7 @@
                     <img
                       src="./assets/spiral-2.svg"
                       alt="spiral"
-                      class="absolute -top-6 left-40 size-20 xl:-top-16 xl:left-[unset] xl:right-40 xl:size-28"
+                      class="absolute -top-6 left-40 size-20 xl:-top-16 xl:right-40 xl:left-[unset] xl:size-28"
                       class="mb-12"
                       data-aos="fade"
                       data-aos-delay="900"
@@ -928,7 +928,7 @@
                     </p>
                   </div>
                   <h2
-                    class="my-6 text-xl/relaxed font-semibold leading-snug xl:text-2xl/relaxed xl:tracking-widest"
+                    class="my-6 text-xl/relaxed leading-snug font-semibold xl:text-2xl/relaxed xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="300"
                     data-aos-anchor="#section-5"
@@ -938,7 +938,7 @@
                     <span>亞洲矽谷逐步實踐</span>
                   </h2>
                   <h3
-                    class="mb-6 text-xl font-semibold leading-snug xl:mb-24 xl:tracking-widest"
+                    class="mb-6 text-xl leading-snug font-semibold xl:mb-24 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="500"
                     data-aos-anchor="#section-5"
@@ -946,7 +946,7 @@
                     『X基地』『生醫園區』 『AI智慧園區』
                   </h3>
                   <p
-                    class="font-medium leading-loose xl:mb-16 xl:tracking-widest"
+                    class="leading-loose font-medium xl:mb-16 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="700"
                     data-aos-anchor="#section-5"
@@ -975,7 +975,7 @@
                   data-aos-delay="900"
                   data-aos-anchor="#section-5"
                 >
-                  <div class="my-6 grid max-xl:mb-2 xl:mb-3 xl:mt-0">
+                  <div class="my-6 grid max-xl:mb-2 xl:mt-0 xl:mb-3">
                     <div
                       class="img-with-caption-w"
                       data-caption="AI智慧園區實景"
@@ -1055,7 +1055,7 @@
           <div>
             <p
               id="counter"
-              class="mb-6 space-y-2.5 text-balance text-center text-xl xl:mb-3"
+              class="mb-6 space-y-2.5 text-center text-xl text-balance xl:mb-3"
               data-aos="fade-up"
               data-aos-delay="700"
               data-aos-anchor="#section-6"
@@ -1192,7 +1192,7 @@
                     建築規劃
                   </p>
                   <h2
-                    class="mb-6 mt-10 flex flex-col gap-y-2 text-xl font-semibold leading-snug max-xl:flex max-xl:w-auto max-xl:flex-col xl:text-base xl:tracking-widest"
+                    class="mt-10 mb-6 flex flex-col gap-y-2 text-xl leading-snug font-semibold max-xl:flex max-xl:w-auto max-xl:flex-col xl:text-base xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="500"
                     data-aos-anchor="#section-7"
@@ -1213,7 +1213,7 @@
                     </div>
                     <div class="max-xl:col-span-2">
                       <div
-                        class="mb-12 font-medium leading-relaxed max-xl:text-[12px] xl:my-10 xl:tracking-widest"
+                        class="mb-12 leading-relaxed font-medium max-xl:text-[12px] xl:my-10 xl:tracking-widest"
                         data-aos="fade-up"
                         data-aos-delay="900"
                         data-aos-anchor="#section-7"
@@ -1252,14 +1252,14 @@
                     <img
                       src="./assets/arrow-right.svg"
                       alt="arrow-right"
-                      class="mr-1 mt-4 size-20 xl:mr-0"
+                      class="mt-4 mr-1 size-20 xl:mr-0"
                     />
                   </button>
                 </div>
-                <div class="mt-6 xl:col-span-4 xl:mt-0 xl:flex">
+                <div class="mt-6 flex xl:col-span-4 xl:mt-0">
                   <div
                     id="gallery-3"
-                    class="relative mb-16 mt-6 w-full xl:mb-0 xl:mt-0"
+                    class="relative w-full"
                     data-aos="fade-right"
                     data-aos-delay="300"
                     data-aos-anchor="#section-7"
@@ -1286,7 +1286,7 @@
                     </div>
                   </div>
                   <div
-                    class="xl:text text-vertical mt-2 text-xl font-semibold leading-relaxed xl:ml-10 xl:tracking-widest"
+                    class="text-vertical text-sm leading-relaxed font-semibold xl:mt-2 xl:ml-10 xl:text-lg xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="500"
                     data-aos-anchor="#section-7"
@@ -1309,7 +1309,7 @@
                   data-aos-delay="900"
                   data-aos-anchor="#section-7"
                 />
-                <div class="text-white xl:order-last xl:col-span-5 xl:text-end">
+                <div class="text-white xl:order-last xl:col-span-3 xl:text-end">
                   <p
                     class="mb-2"
                     data-aos="fade-up"
@@ -1326,68 +1326,62 @@
                     建築外觀
                   </p>
                   <h2
-                    class="mb-6 mt-10 flex flex-col gap-y-2 font-semibold leading-snug xl:tracking-widest"
+                    class="mt-10 mb-6 flex flex-col gap-y-2 text-xl leading-snug font-semibold max-xl:flex max-xl:w-auto max-xl:flex-col xl:text-base xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="900"
                     data-aos-anchor="#section-7"
                   >
-                    <span class="text-xl">林淵源建築師事務所</span>
-                    <span class="text-xl">林淵源建築師</span>
+                    <div>林淵源建築師事務所</div>
+                    <div>林淵源建築師</div>
                   </h2>
-                  <img
-                    src="./assets/林淵源建築師.webp"
-                    alt="林淵源建築師"
-                    class="aspect-square object-cover object-center xl:ml-auto xl:aspect-[4/5] xl:max-w-[160px]"
-                    data-aos="fade-up"
-                    data-aos-delay="1200"
-                    data-aos-anchor="#section-7"
-                  />
-                  <div
-                    class="mb-10 mt-6 font-medium leading-relaxed xl:mt-10 xl:tracking-widest"
-                    data-aos="fade-up"
-                    data-aos-delay="1500"
-                    data-aos-anchor="#section-7"
-                  >
-                    <p>入圍2011年TRAA第三屆台灣住宅建築獎、</p>
-                    <p>2016年TRAA第五屆台灣住宅建築獎，</p>
-                    <p>「兩岸五十位傑出建築人的追夢故事」專訪報導，</p>
-                    <p>
-                      浙江省海寧市「地表上的詩意」徐志摩故里永不落幕的建築展，
-                    </p>
-                    <p>亞洲十位參展建築師之一。</p>
-                  </div>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-delay="1200"
-                    data-aos-anchor="#section-7"
-                  >
-                    <div class="mb-6 xl:mb-4">
-                      <span class="mb-4 mr-2 text-xl font-semibold"
-                        >Portfolio</span
-                      >
-                      <span class="text-lg">/ 經典業績</span>
+                  <div class="max-xl:grid max-xl:grid-cols-3 max-xl:gap-x-3">
+                    <div class="max-xl:col-span-1">
+                      <img
+                        src="./assets/林淵源建築師.webp"
+                        alt="林淵源建築師"
+                        class="aspect-square object-cover object-center xl:ml-auto xl:aspect-[4/5] xl:max-w-[160px]"
+                        data-aos="fade-up"
+                        data-aos-delay="1200"
+                        data-aos-anchor="#section-7"
+                      />
                     </div>
-                    <ul class="space-y-2">
-                      <li>「水邊森」入圍2011年TRAA第三屆台灣住宅建築獎</li>
-                      <li>「T house」入圍2016年TRAA第五屆台灣住宅建築獎</li>
-                      <li>
-                        「昕奕居」、「楓韻點石」入圍2018年TRAA第六屆台灣住宅建築獎
-                      </li>
-                    </ul>
+                    <div class="max-xl:col-span-2">
+                      <div
+                        class="mb-12 leading-relaxed font-medium max-xl:text-[12px] xl:my-10 xl:tracking-widest"
+                        data-aos="fade-up"
+                        data-aos-delay="1500"
+                        data-aos-anchor="#section-7"
+                      >
+                        <p>入圍2011年TRAA第三屆台灣住宅建築獎、</p>
+                        <p>2016年TRAA第五屆台灣住宅建築獎，</p>
+                        <p>「兩岸五十位傑出建築人的追夢故事」專訪報導，</p>
+                        <p>
+                          浙江省海寧市「地表上的詩意」徐志摩故里永不落幕的建築展，
+                        </p>
+                        <p>亞洲十位參展建築師之一。</p>
+                      </div>
+                    </div>
+                    <div
+                      class="max-xl:col-span-3 max-xl:text-[12px] xl:gap-x-10"
+                      data-aos="fade-up"
+                      data-aos-delay="1200"
+                      data-aos-anchor="#section-7"
+                    >
+                      <div class="shrink-0">
+                        <span class="font-semibold xl:mr-2 xl:text-xl">
+                          Portfolio
+                        </span>
+                        <span class="xl:text-lg">/ 經典業績</span>
+                      </div>
+                      <ul class="space-y-1 xl:space-y-2">
+                        <li>「水邊森」入圍2011年TRAA第三屆台灣住宅建築獎</li>
+                        <li>「T house」入圍2016年TRAA第五屆台灣住宅建築獎</li>
+                        <li>
+                          「昕奕居」、「楓韻點石」入圍2018年TRAA第六屆台灣住宅建築獎
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                  <button
-                    type="button"
-                    class="section-swiper-3-btn ml-auto hidden xl:block"
-                    data-aos="fade-right"
-                    data-aos-delay="1200"
-                    data-aos-anchor="#section-7"
-                  >
-                    <img
-                      src="./assets/arrow-right.svg"
-                      alt="arrow-right"
-                      class="mr-1 mt-4 size-20 xl:mr-0"
-                    />
-                  </button>
                 </div>
                 <div
                   class="xl:col-span-6 xl:mt-0"
@@ -1397,7 +1391,7 @@
                 >
                   <div
                     id="gallery-4"
-                    class="relative mb-16 mt-10 w-full xl:mb-0 xl:mt-0"
+                    class="relative mt-10 mb-16 w-full xl:mt-0 xl:mb-0"
                   >
                     <div
                       class="img-with-caption-w-l gallery-img active"
@@ -1421,7 +1415,7 @@
                     </div>
                   </div>
                   <div
-                    class="xl:text mt-2 text-xl font-semibold leading-relaxed xl:mt-10 xl:tracking-widest"
+                    class="xl:text mt-2 text-xl leading-relaxed font-semibold xl:mt-10 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="300"
                     data-aos-anchor="#section-7"
@@ -1460,7 +1454,7 @@
                     景觀公設
                   </p>
                   <h2
-                    class="mb-6 mt-10 flex flex-col gap-y-2 font-semibold leading-snug xl:tracking-widest"
+                    class="mt-10 mb-6 flex flex-col gap-y-2 leading-snug font-semibold xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="700"
                     data-aos-anchor="#section-7"
@@ -1477,7 +1471,7 @@
                     data-aos-anchor="#section-7"
                   />
                   <div
-                    class="mb-10 mt-6 font-medium leading-relaxed xl:mt-10 xl:tracking-widest"
+                    class="mt-6 mb-10 leading-relaxed font-medium xl:mt-10 xl:tracking-widest"
                     data-aos="fade-up"
                     data-aos-delay="1200"
                     data-aos-anchor="#section-7"
@@ -1493,7 +1487,7 @@
                     data-aos-anchor="#section-7"
                   >
                     <div class="mb-6 xl:mb-4">
-                      <span class="mb-4 mr-2 text-xl font-semibold"
+                      <span class="mr-2 mb-4 text-xl font-semibold"
                         >Portfolio</span
                       >
                       <span class="text-lg">/ 代表作品</span>
@@ -1519,14 +1513,14 @@
                     <img
                       src="./assets/arrow-right.svg"
                       alt="arrow-right"
-                      class="mr-1 mt-4 size-20 xl:mr-0"
+                      class="mt-4 mr-1 size-20 xl:mr-0"
                     />
                   </button>
                 </div>
                 <div class="xl:col-span-4 xl:mt-0">
                   <div
                     id="gallery-5"
-                    class="relative mb-16 mt-10 w-full xl:mb-0 xl:mt-0"
+                    class="relative mt-10 mb-16 w-full xl:mt-0 xl:mb-0"
                     data-aos="fade-right"
                     data-aos-delay="300"
                     data-aos-anchor="#section-7"
@@ -1774,7 +1768,7 @@
       </section>
     </main>
     <footer
-      class="fixed bottom-0 right-0 z-50 w-full shadow-md md:bottom-auto md:top-0 md:w-auto"
+      class="fixed right-0 bottom-0 z-50 w-full shadow-md md:top-0 md:bottom-auto md:w-auto"
       style="display: none"
     >
       <div class="flex items-stretch justify-between">
@@ -1880,12 +1874,18 @@
           }
         });
 
-        function initSectionSwiper(swiperSelector, btnSelector, cb) {
+        function initSectionSwiper(
+          swiperSelector,
+          btnSelector,
+          cb,
+          autoHeight = false,
+        ) {
           const swiper = new Swiper(swiperSelector, {
             loop: true,
             slidesPerView: 1,
             spaceBetween: 400,
             allowTouchMove: false,
+            autoHeight,
           });
 
           $(btnSelector).click(() => {
@@ -1917,7 +1917,12 @@
             slide.style.height = `${maxHeight}px`;
           });
         });
-        initSectionSwiper("#section-swiper-3", ".section-swiper-3-btn");
+        initSectionSwiper(
+          "#section-swiper-3",
+          ".section-swiper-3-btn",
+          undefined,
+          true,
+        );
 
         function initGallery(selector) {
           const totalLength = $(`${selector} .gallery-img`).length;

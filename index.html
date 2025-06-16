@@ -1904,12 +1904,13 @@
           }
         });
 
-        function initSectionSwiper(
+        function initSectionSwiper({
           swiperSelector,
           btnSelector,
-          cb,
+          onSlideChange,
+          onClick,
           autoHeight = false,
-        ) {
+        }) {
           const swiper = new Swiper(swiperSelector, {
             loop: true,
             slidesPerView: 1,
@@ -1920,43 +1921,58 @@
 
           $(btnSelector).click(() => {
             swiper.slideNext();
+
+            if (typeof onClick === "function") {
+              onClick();
+            }
           });
 
-          if (typeof cb === "function") {
+          if (typeof onSlideChange === "function") {
             swiper.on("slideChange", () => {
-              cb();
+              onSlideChange();
             });
           }
         }
 
-        initSectionSwiper("#section-swiper-1", ".section-swiper-1-btn");
-        initSectionSwiper("#section-swiper-2", ".section-swiper-2-btn", () => {
-          const slides = document.querySelectorAll(
-            "#section-swiper-2 .swiper-slide",
-          );
-          let maxHeight = 0;
-
-          slides.forEach((slide) => {
-            const slideHeight = slide.offsetHeight;
-            if (slideHeight > maxHeight) {
-              maxHeight = slideHeight;
-            }
-          });
-
-          slides.forEach((slide) => {
-            slide.style.height = `${maxHeight}px`;
-          });
+        initSectionSwiper({
+          swiperSelector: "#section-swiper-1",
+          btnSelector: ".section-swiper-1-btn",
         });
-        initSectionSwiper(
-          "#section-swiper-3",
-          ".section-swiper-3-btn",
-          () => {
+        initSectionSwiper({
+          swiperSelector: "#section-swiper-2",
+          btnSelector: ".section-swiper-2-btn",
+          onSlideChange: () => {
+            const slides = document.querySelectorAll(
+              "#section-swiper-2 .swiper-slide",
+            );
+            let maxHeight = 0;
+
+            slides.forEach((slide) => {
+              const slideHeight = slide.offsetHeight;
+              if (slideHeight > maxHeight) {
+                maxHeight = slideHeight;
+              }
+            });
+
+            slides.forEach((slide) => {
+              slide.style.height = `${maxHeight}px`;
+            });
+          },
+        });
+        initSectionSwiper({
+          swiperSelector: "#section-swiper-3",
+          btnSelector: ".section-swiper-3-btn",
+          onClick: () => {
+            if (!isMobile) {
+              return;
+            }
+
             window.scrollTo({
               top: $("#section-7").offset().top,
             });
           },
-          true,
-        );
+          autoHeight: true,
+        });
 
         function initGallery(selector) {
           const totalLength = $(`${selector} .gallery-img`).length;

@@ -49,6 +49,43 @@
         max-width: 100%;
       }
 
+      /* YouTube 影片背景 */
+      .video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      .video-background iframe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100vw;
+        height: 56.25vw; /* 16:9 比例 */
+        min-height: 100vh;
+        min-width: 177.78vh; /* 16:9 比例 */
+        transform: translate(-50%, -50%);
+      }
+
+      /* 針對手機優化 */
+      @media (max-aspect-ratio: 16/9) {
+        .video-background iframe {
+          width: 177.78vh;
+          height: 100vh;
+        }
+      }
+
+      @media (min-aspect-ratio: 16/9) {
+        .video-background iframe {
+          width: 100vw;
+          height: 56.25vw;
+        }
+      }
+
       #burger-icon {
         width: 32px;
         height: 24px;
@@ -296,15 +333,8 @@
         id="section-1"
         class="relative h-screen w-full bg-cover bg-center bg-no-repeat"
       >
-        <div class="absolute inset-0 -z-10 flex justify-center">
-          <video
-            src="./assets/banner.webm"
-            class="-z-20 size-full object-cover"
-            autoplay=""
-            loop=""
-            muted=""
-            playsinline=""
-          ></video>
+        <div class="video-background">
+          <div id="youtube-player"></div>
         </div>
         <div
           class="absolute inset-0 flex justify-center bg-black/15 p-6 xl:items-center"
@@ -1895,6 +1925,56 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
     <script src="./assets/vendors/jquery.twzipcode.min.js"></script>
+
+    <script>
+      const tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/player_api";
+      const firstScriptTag = document.getElementsByTagName("script")[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      let player;
+
+      // YouTube API 準備就緒時執行
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player("youtube-player", {
+          height: "100%",
+          width: "100%",
+          videoId: "bDAChiIhXIY", // 替換為您想要的 YouTube 影片 ID
+          playerVars: {
+            autoplay: 1, // 自動播放
+            mute: 1, // 靜音（必須靜音才能自動播放）
+            loop: 1, // 循環播放
+            controls: 0, // 隱藏控制項
+            showinfo: 0, // 隱藏資訊
+            rel: 0, // 不顯示相關影片
+            iv_load_policy: 3, // 隱藏註解
+            modestbranding: 1, // 簡化 YouTube 標誌
+            playsinline: 1, // 行動裝置內嵌播放
+            playlist: "bDAChiIhXIY", // 循環播放需要的播放清單
+            fs: 0, // 禁用全螢幕按鈕
+            disablekb: 1, // 禁用鍵盤控制
+            cc_load_policy: 0, // 不顯示字幕
+          },
+          events: {
+            onReady: onPlayerReady,
+            onStateChange: onPlayerStateChange,
+          },
+        });
+      }
+
+      // 播放器準備就緒
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 播放器狀態改變
+      function onPlayerStateChange(event) {
+        // 如果影片結束，重新播放
+        if (event.data === YT.PlayerState.ENDED) {
+          player.playVideo();
+        }
+      }
+    </script>
 
     <script>
       $(document).ready(() => {

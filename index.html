@@ -833,7 +833,7 @@
 
             <div class="swiper-slide flex flex-col">
               <div
-                class="flex max-xl:mb-16 max-xl:h-full max-xl:flex-col xl:items-stretch xl:justify-between"
+                class="flex max-xl:h-full max-xl:flex-col xl:items-stretch xl:justify-between"
               >
                 <div
                   class="grid gap-y-2 max-xl:mb-16 max-xl:grow xl:mt-0 xl:w-1/2"
@@ -932,7 +932,7 @@
                 class="flex max-xl:h-full max-xl:flex-col xl:items-stretch xl:justify-between"
               >
                 <div
-                  class="img-with-caption-w mt-6 grid max-xl:mb-16 max-xl:max-h-[400px] max-xl:grow xl:my-auto xl:mt-0 xl:w-1/2"
+                  class="img-with-caption-w mt-6 grid max-xl:mb-16 max-xl:max-h-[400px] max-xl:min-h-[424px] max-xl:grow xl:my-auto xl:mt-0 xl:aspect-[5/4] xl:w-1/2"
                   data-caption="外觀3D示意"
                   data-aos="fade-left"
                   data-aos-delay="900"
@@ -941,7 +941,7 @@
                   <img
                     src="./assets/外觀3D示意.webp"
                     alt="外觀3D示意"
-                    class="h-full object-cover object-top xl:aspect-[5/4]"
+                    class="h-full object-cover object-top"
                   />
                 </div>
                 <div class="text-white xl:mt-auto xl:w-[458px]">
@@ -1213,6 +1213,7 @@
                 戶
               </span>
             </p>
+            z`
             <p
               class="mx-auto mb-12 text-center xl:mb-40 xl:text-xl"
               data-aos="fade-up"
@@ -2242,21 +2243,7 @@
         initSectionSwiper({
           swiperSelector: "#section-swiper-2",
           btnSelector: ".section-swiper-2-btn",
-          onSlideChange: () => {
-            // const slides = document.querySelectorAll(
-            //   "#section-swiper-2 .swiper-slide",
-            // );
-            // let maxHeight = 0;
-            // slides.forEach((slide) => {
-            //   const slideHeight = slide.offsetHeight;
-            //   if (slideHeight > maxHeight) {
-            //     maxHeight = slideHeight;
-            //   }
-            // });
-            // slides.forEach((slide) => {
-            //   slide.style.height = `${maxHeight}px`;
-            // });
-          },
+          autoHeight: true,
         });
         initSectionSwiper({
           swiperSelector: "#section-swiper-3",
